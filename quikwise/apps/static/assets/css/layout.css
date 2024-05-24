@@ -1,0 +1,885 @@
+#page-top {height : auto; overflow-x:hidden;}
+#menu {top:-100px;}
+.navbar-default {background:#FFF; border-bottom: 1px solid #b80117;}
+.navbar-brand {padding:5px 0 0 15px;}
+.navbar-collapse {float:right;}
+.nav > li > a {padding: 15px 9px 3px 9px;}
+.navbar-default .navbar-nav > li > a {color:#b80117 !important; font-size:14px;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus , .navbar-default .navbar-nav > .active > a , .navbar-default .navbar-nav > .active > a:hover {background-color:transparent; border-bottom: 2px solid #b80117;}
+.navbar-default .navbar-nav > li.icon-app {margin-left:10px;}
+.navbar-default .navbar-nav > li.icon-app > a {display:inline-block; padding:10px 0 5px 2px;border-bottom:0;}
+.navbar-default .navbar-nav > li.icon-app > a:hover {border-bottom:0px;}
+
+.navbar-collapse .sign {padding:15px 0 15px 10px;}
+.navbar-collapse .sign a {display:inline-block; padding:0; margin:0 3px; font-size:14px !important;}
+.navbar-collapse .sign a:hover , .navbar-collapse .sign a.active {color:#0B0B09; border-bottom: 2px solid #b80117;}
+.navbar-collapse .lang a {display:inline-block; padding:0; margin:0 3px; font-size:14px !important;}
+.navbar-collapse .lang a:hover , .navbar-collapse .lang a.active {color:#0B0B09; border-bottom: 2px solid #b80117;}
+
+.navbar-collapse .country a {display:inline-block; padding:0; margin:0 3px; }
+.navbar-collapse .country a:hover , .navbar-collapse .country a.active {color:#0B0B09; border-bottom: 2px solid #b80117;}
+
+.AppStoreIcon , .GooglePlayIcon, .ShopIcon {height:30px;}
+.logo-washbox {margin:0 auto 20px auto;}
+
+/*tabs*/
+.nav-tabs {border-bottom: 1px solid #b80117;}
+.nav-tabs > li {margin-right: 10px;}
+.nav-tabs > li > a {font-size:25px; color:#b80117; border-radius: 8px 8px 0 0; padding:10px 0;}
+.nav-tabs > li > a:hover , .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {border-bottom: 1px solid #b80117; background:#b80117; color:#FFF;}
+
+#howItWorks-tab .nav-tabs > li {width:50%; margin:0;}
+#howItWorks-tab .nav-tabs > li a {text-align:center;}
+
+#pricingPage-tab .nav-tabs {width:100%; padding:0;margin:0;}
+#pricingPage-tab .nav-tabs > li {margin:0;}
+#pricingPage-tab .nav-tabs > li:nth-child(1) {width:20%;}
+#pricingPage-tab .nav-tabs > li:nth-child(2) {width:20%;}
+#pricingPage-tab .nav-tabs > li:nth-child(3) {width:20%;}
+#pricingPage-tab .nav-tabs > li:nth-child(4) {width:20%;}
+#pricingPage-tab .nav-tabs > li:nth-child(5) {width:20%; font-weight: bold !important; padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin: -3px auto !important; background: #ffc22c; color: #b80117; border-radius: 8px 8px 0 0; border-top: 3px solid #b80117; border-left: 3px solid #b80117; border-right: 3px solid #b80117;  }
+#pricingPage-tab .nav-tabs > li a {text-align:center; font-size:22px;}
+
+
+
+#smePage-tab .nav-tabs {width:100%; padding:0;margin:0;}
+#smePage-tab .nav-tabs > li {margin:0;}
+#smePage-tab .nav-tabs > li:nth-child(1) {width:40%;}
+/* #smePage-tab .nav-tabs > li:nth-child(2) {width:40%;} */
+#smePage-tab .nav-tabs > li:nth-child(2) {width:30%; font-weight: bold !important; padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin: -3px auto !important; background: #ffc22c; color: #b80117; border-radius: 8px 8px 0 0; border-top: 3px solid #b80117; border-left: 3px solid #b80117; border-right: 3px solid #b80117;  }
+#smePage-tab .nav-tabs > li:nth-child(3) {width:30%; font-weight: bold !important; padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin: -3px auto !important; background: #ffc22c; color: #b80117; border-radius: 8px 8px 0 0; border-top: 3px solid #b80117; border-left: 3px solid #b80117; border-right: 3px solid #b80117;  }
+#smePage-tab .nav-tabs > li a {text-align:center; font-size:22px;}
+
+.smeDayRemark {font-size:12px; color:#b80117; line-height:20px;}
+
+#-tab .nav-tabs {width:100%; padding:0;margin:0;}
+#-tab .nav-tabs > li {margin:0;}
+#-tab .nav-tabs > li:nth-child(1) {width:40%;}
+/* #-tab .nav-tabs > li:nth-child(2) {width:30%;} */
+#-tab .nav-tabs > li:nth-child(2) {width:30%; font-weight: bold !important; padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin: -3px auto !important; background: #ffc22c; color: #b80117; border-radius: 8px 8px 0 0; border-top: 3px solid #b80117; border-left: 3px solid #b80117; border-right: 3px solid #b80117;  }
+#-tab .nav-tabs > li:nth-child(3) {width:30%; font-weight: bold !important; padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin: -3px auto !important; background: #ffc22c; color: #b80117; border-radius: 8px 8px 0 0; border-top: 3px solid #b80117; border-left: 3px solid #b80117; border-right: 3px solid #b80117;  }
+#-tab .nav-tabs > li a {text-align:center; font-size:22px;}
+
+
+
+#cleanClothes-tab {margin:40px 0;}
+#cleanClothes-tab .nav-tabs > li {width:50%; margin:0;}
+#cleanClothes-tab .nav-tabs > li a {text-align:center;}
+#cleanClothes-tab .tab-pane {padding: 50px 0;}
+
+.tab-pane h2 {font-size: 30px;}
+
+a.clean-now {background-color: #b80117; border: 1px solid #b80117; color: #fff; display: block; font-size: 22px; letter-spacing: 1px; margin: 0; padding: 15px 0; text-align: center;}
+a.clean-now:hover {background-color: #fff; border: 1px solid #b80117; color: #b80117;}
+
+#btnBottom {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#btnBottom a.cmore {
+    padding: 5px 30px;
+    border: 2px solid #b80117;
+    font-size: 20px;
+    color: #b80117;
+    display: inline-block;
+    text-align: center;
+	text-decoration: none;
+}
+#btnBottom a.cmore:hover {
+    background-color: #b80117;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+
+    #btnBottom a.cmore {
+        padding: 5px 30px;
+        font-size: 24px;
+    }
+}
+@media (min-width: 992px) {
+
+    #btnBottom a.cmore {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+}
+
+
+
+
+#btnBottom a.cmore2 {
+    padding: 5px 30px;
+    border: 2px solid #b80117;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+	text-decoration: none;
+  color: #fff;
+  background-color: #b80117;
+}
+#btnBottom a.cmore2:hover {
+    color: #b80117;
+    background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+
+    #btnBottom a.cmore2 {
+        padding: 5px 30px;
+        font-size: 24px;
+    }
+}
+@media (min-width: 992px) {
+
+    #btnBottom a.cmore2 {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+}
+
+
+
+#border-radius {border-radius:50%;}
+
+.wrapper {margin-top:98px; font-size: 16px !important; }
+.wrapper a { text-decoration: underline; color: #b80117; }
+
+.titlePage {background: #f2f2f2;}
+.titlePage h1 {font-size: 32px; padding: 50px 10px 50px 0; color: #b80117; margin: 0; text-transform: uppercase;}
+.text-right {text-align:right;}
+.text-red {color: #b80117;}
+.header-th {font-size:20px; line-height:30px;}
+.content-th {font-size:13px; line-height:20px;}
+.content-th-15 {font-size:18px !important; line-height:20px;}
+.link-red , .link-red:hover , .link-red:focus , .link-red:visited {color: #b80117;}
+
+#contents {padding:30px 0 50px 0; font-size:15px; color:#333;}
+#contents h2 {font-size:22px; margin:15px 0; color:#000;}
+#contents .H2 {font-size:22px; margin:15px 0; color:#000;}
+#contents h3 {font-size:17px; color:#000;}
+#contents .H3 {font-size:18px;margin-top:20px; margin-bottom:20px; line-height: 1.1;}
+#contents h4 {font-size:18px; margin:30px 0 15px 0;}
+#contents .H4 {font-size:20px; margin:30px 0 15px 0;}
+#contents h5 {font-size:15px; font-weight:bold; margin:30px 0 15px 0;}
+#contents .H5 {font-size:15px; font-weight:bold; margin:30px 0 15px 0;}
+#contents ol li ul {padding:10px 40px;}
+#contents ol li ul li {padding:2px 0;}
+.notice {font-size:15px !important;}
+
+#signIn {z-index:99999;}
+#signIn input {width:180px; height:30px;}
+
+.maps .link-red {font-size:20px;}
+#termsConditions .modal-dialog {width:80%;}
+#termsConditions .modal-body {padding:15px 30px;}
+#termsConditions .modal-body h2 {font-size:20px; color: #b80117; margin:0; padding:10px 0 20px 0;}
+#termsConditions .modal-body ol li {padding:3px 0;}
+
+#turnaround {padding:30px 0 70px 0;}
+#turnaround h1 {font-size:28px; color:#b80117; margin:20px 0 0 0;}
+#turnaround .turnaround-detail {margin-top:60px;}
+#turnaround h3 {font-size:15px; font-weight:bold; margin:20px 0 10px 0;}
+#turnaround p {font-size:14px;}
+
+#signInBox , #passwordBox {width:100%;}
+#signInBox h1 , #passwordBox h1 {font-size:18px; color:#b80117; margin:0 0 20px 0; text-transform:uppercase;}
+
+#bringALocker {padding-top: 68px;}
+
+#homepage #promo-home {background: #f2f2f2; padding:50px 0 80px 0;}
+.homepage-promo-homeH2 {color: #b80117; font-size: 40px; margin-bottom: 50px; padding: 0; text-align:center;}
+#homepage #promo-home #bannerSlide .item img {margin:auto;}
+
+
+
+@media(max-width:768px){
+    .navbar-collapse {float:none; width:100%;}
+    .navbar-default .navbar-nav > li > a {padding: 7px 0; border-bottom: 1px solid #F2F2F2; text-align:center;}
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus , .navbar-default .navbar-nav > .active > a , .navbar-default .navbar-nav > .active > a:hover {background:#F2F2F2; border-bottom: 1px solid #b80117;}
+    .navbar-default .icon-app {height:50px; text-align:center;}
+    .navbar-default .icon-app:hover {background:none;}
+    .navbar-default .sign {background:none; margin-left:0; text-align:center; padding:0px;}
+    .navbar-default .sign a {padding: 7px 10px !important; border-bottom: 1px solid #FFF;}
+    .navbar-default .lang {background:none; margin-left:0; text-align:center; padding:0px;}
+    .navbar-default .lang a {padding: 7px 10px !important; border-bottom: 1px solid #FFF;}
+    .navbar-default .navbar-nav > li.icon-shop > a:hover {opacity:0.8; background:#b80117; border: 1px solid #b80117;}
+
+    img.scrolldown {width: 35px !important; height: 35px !important;}
+    .navbar {min-height:60px;}
+    .navbar-brand {padding:5px 0 0 0;}
+    .navbar-brand img {height:45px;}
+    .navbar-default .navbar-toggle {border-color:#b80117; margin-right:0;}
+    .navbar-default .navbar-toggle .icon-bar {background-color: #b80117;}
+
+    .nav-tabs > li > a {font-size:22px;}
+
+    .wrapper {margin-top:60px;}
+
+    #contents {padding:10px 15px 50px 15px;}
+    #contents h2 {font-size:16px;}
+    #contents .H2 {font-size:16px;}
+    #contents h3 {font-size:14px;}
+    #contents .H3 {font-size:14px;}
+    #contents .H3 {font-size:14px;margin-top:20px; margin-bottom:20px; line-height: 1.1;}
+    #contents h4 {font-size:15px; margin:13px 0;}
+    #contents .h4 {font-size:15px; margin:13px 0;}
+    #contents ol {padding-left:20px;}
+    #contents ol li ul {padding:10px 10px;}
+
+    #pricingPage-tab .nav-tabs > li a {font-size:16px;}
+
+    #-tab .nav-tabs > li a {font-size:16px;}
+
+    #cleanClothes-tab .tab-pane {padding: 20px 0;}
+    .signup h1 {font-size:20px;}
+    .signup label {font-weight:normal; font-size:13px;}
+
+    #turnaround {padding:20px 0 70px 0;}
+    #turnaround .turnaround-detail {margin-top:0px;}
+    #turnaround h1 {font-size:20px; margin:20px 0;}
+    #turnaround h3 {font-size:14px; margin:20px 0 10px 0;}
+    #turnaround p {font-size:13px;}
+
+    #bringALocker {padding-top: 60px;}
+
+
+}
+@media(max-width:400px){
+    a.clean-now {font-size: 20px; padding: 10px 0;}
+    .nav-tabs > li > a {font-size:20px;}
+    .tab-pane .col-md-3 {padding-bottom:25px;}
+    #howItWorks-tab .nav-tabs > li {width:50%; margin:0;}
+    #howItWorks-tab .nav-tabs > li > a {font-size:15px; padding:10px 0; text-align:center;}
+    #pricingPage-tab1 .col-md-3 {padding-bottom:0;}
+    #pricingPage-tab .nav-tabs > li {margin-right:2px;}
+    #pricingPage-tab .nav-tabs > li:nth-child(1) {width:49%;}
+    #pricingPage-tab .nav-tabs > li:nth-child(2) {width:49%;}
+    #pricingPage-tab .nav-tabs > li:nth-child(3) {width:49%;}
+    #pricingPage-tab .nav-tabs > li:nth-child(4) {width:49%;}
+    #pricingPage-tab .nav-tabs > li:nth-child(5) {width:49%;}
+    #pricingPage-tab .nav-tabs > li:nth-child(6) {width:49%;}
+    #pricingPage-tab .nav-tabs > li > a {font-size:15px; padding:10px 0; text-align:center;}
+
+    #smePage-tab1 .col-md-3 {padding-bottom:0;}
+    #smePage-tab .nav-tabs > li {margin-right:2px;}
+    #smePage-tab .nav-tabs > li:nth-child(1) {width:100%;}
+    #smePage-tab .nav-tabs > li:nth-child(2) {width:50%;}
+    #smePage-tab .nav-tabs > li:nth-child(3) {width:50%;}
+    #smePage-tab .nav-tabs > li > a {font-size:15px; padding:10px 0; text-align:center;}
+
+    #-tab1 .col-md-3 {padding-bottom:0;}
+    #-tab .nav-tabs > li {margin-right:2px;}
+    #-tab .nav-tabs > li:nth-child(1) {width:100%;}
+    #-tab .nav-tabs > li:nth-child(2) {width:50%;}
+    #-tab .nav-tabs > li:nth-child(3) {width:50%;}
+    /* #-tab .nav-tabs > li:nth-child(2) {width:20%;color:#ffffff;} */
+    /* #-tab .nav-tabs > li:nth-child(3) {width:60%;} */
+    #-tab .nav-tabs > li > a {font-size:15px; padding:10px 0; text-align:center;}
+
+    #cleanClothes-tab .nav-tabs > li {width:50%; margin:0;}
+    #cleanClothes-tab .nav-tabs > li > a {font-size:15px; padding:10px; text-align:center;}
+
+    .wrapper {margin-top:60px;}
+    .titlePage h1 {font-size:20px; padding: 30px 0;}
+    #signIn input {width:100%;}
+    .signup label {font-size:12px;}
+
+    #termsConditions .modal-dialog {width:90%;}
+
+    #homepage #promo-home {padding:30px 0 70px 0;}
+    .homepage-promo-homeH2 {font-size: 24px; margin-bottom: 30px;}
+}
+@media (min-width: 1200px) {
+    .wrapper {margin-top: 68px;}
+}
+
+
+#shopPage {margin-top: 60px;}
+#shopPage > .title {background: #F2F2F2;}
+#shopPage > .title h1 {color: #b80117; font-size: 20px; text-transform: uppercase; padding: 20px 0; margin: 0;}
+
+#shopPage .package h2 {font-size:18px; color:#b80117; margin:20px 0 10px 0;}
+#shopPage .package h3 {font-size:15px; color:#b80117; margin:0 0 20px 0;}
+#shopPage .package h4 {font-size:14px; color:#b80117; font-weight:bold; margin:0 0 10px 0;}
+#shopPage .package h4 span {font-weight:normal; color: #282828;}
+#shopPage .package .item {position:relative; padding:20px 0 0 0; margin:15px 0; border:1px solid #dedede;}
+#shopPage .package .item:hover {border:1px solid #b80117;}
+#shopPage .package .item .icon {position:absolute; top:-8px; left:-8px;}
+#shopPage .package .item .icon-right {position:absolute; top:-8px; right:-8px;}
+#shopPage .package .item .img {text-align:center;}
+#shopPage .package .item .img img {margin:auto;}
+#shopPage .package .item .price {color:#b80117; font-size:16px; text-align:center; padding:25px 0 10px 0;}
+#shopPage .package .item .detail {font-size:13px; padding:10px; background: #F9F9F9;}
+#shopPage .package .item .detail ul {margin:0; padding:5px 0 0 10px;}
+#shopPage .package .item .detail li {padding:2px 0; list-style:none;}
+#shopPage .package .item .name {font-size:15px; font-weight:bold; padding:10px 20px; border-bottom: 1px solid #ccc;}
+#shopPage .package .modal-body {padding: 20px 50px 30px 50px;}
+#shopPage .buyBox {padding:10px; font-size:20px; color: #b80117; background: #F2F2F2; text-align:center;}
+#shopPage .buyBox .buyPrice {padding:10px 0 15px 20px; font-size:16px;}
+#shopPage .buyBox .buyPrice2 {padding:10px 0 0 10px;}
+#shopPage .buyBox .buyIcon {padding:5px 0 0 0;}
+#shopPage .buyBox .btnBuy {padding:0 10px 0 0;}
+#shopPage .buyBox .buyButton {padding:0 5px 0 0;}
+#shopPage .buyBox .buy {display:block; background-color: #b80117; border: 1px solid #b80117; border-radius: 5px; color: #fff; font-size:20px; letter-spacing: 1px; margin:0; padding: 10px 0; text-align:center;}
+#shopPage .buyBox .buy:hover {opacity:0.8;}
+#shopPage .comparison {width:100%;}
+#shopPage .comparison td {width:8%; font-size:12px; text-align:center; border:1px solid #999; line-height:18px; padding:8px 0;}
+#shopPage .memberVsNon {width:100%; margin:30px 0;}
+#shopPage .memberVsNon td {width:16%; font-size:11px; text-align:center; border:1px solid #999; line-height:18px; padding:8px 0;}
+
+@media (min-width: 768px) {
+    #shopPage > .title h1 {padding: 50px 0; font-size: 30px; padding-right: 10px;}
+    #shopPage .package h2 {font-size:24px; margin:30px 0 20px 0;}
+    #shopPage .package h3 {font-size:20px; margin:0 0 20px 0;}
+    #shopPage .package .item {padding:35px 0 0 0; margin:20px 0;}
+    #shopPage .package .item .price {font-size:20px;padding:30px 0 15px 0;}
+    #shopPage .package .item .detail {font-size:13px; padding:10px 20px;}
+    #shopPage .package .item .detail li {padding:2px 0;}
+    #shopPage .package .item .name {font-size:18px; padding:15px 30px;}
+    #shopPage .package .modal-body {padding: 20px 50px 30px 50px;}
+    #shopPage .buyBox {padding:15px; font-size:20px; text-align:left;}
+    #shopPage .buyBox .buyPrice {padding:10px 0 0 30px; font-size:20px;}
+    #shopPage .comparison td {width:8%; font-size:13px; line-height:18px; padding:8px 0;}
+    #shopPage .memberVsNon td {width:16%;; font-size:13px; line-height:18px; padding:8px 0;}
+}
+@media (min-width: 992px) {
+    #shopPage {margin-top: 68px;}
+    #shopPage .comparison td {width:8%; font-size:14px; line-height:18px; padding:8px 0;}
+    #shopPage .memberVsNon td {width:16%;; font-size:14px; line-height:18px; padding:8px 0;}
+}
+
+#pressPage {margin-top: 60px;}
+#pressPage > .title {background: #F2F2F2;}
+#pressPage > .title h1 {color: #b80117; font-size: 20px; text-transform: uppercase; padding: 20px 0; margin: 0;}
+#pressPage #pressList {padding:30px 15px;}
+#pressPage #videoModal iframe {height:300px;}
+#pressPage .text-v {display:block; text-align:center; font-size:13px; color: #b80117; text-transform: uppercase; padding:10px 0;}
+#pressList .row > div {padding:10px 15px;}
+
+@media (min-width: 768px) {
+    #pressPage > .title h1 {padding: 50px 0; font-size: 30px; padding-right: 10px;}
+    #pressPage #pressList {padding:50px 15px;}
+    #pressPage #videoModal iframe {height:400px;}
+    #pressPage .text-v {font-size:20px; padding:20px 0;}
+    #pressList .row > div {padding:15px;}
+}
+
+@media (min-width: 1200px) {
+    #pressPage {margin-top: 68px;}
+}
+
+@media (width: 1920px) {
+    #pressPage {margin-top: 98px;}
+}
+
+#careerPage {margin-top: 60px;}
+#careerPage > .title {background: #F2F2F2;}
+#careerPage > .title h1 {color: #b80117; font-size: 20px; text-transform: uppercase; padding: 20px 0; margin: 0;}
+#careerPage .joblist {margin: 20px 0 100px 0;}
+#careerPage .joblist h4 a {font-size:13px; color:#333;}
+#careerPage .joblist .panel {border-radius:0; margin-top:0 !important; border-bottom: 1px solid #b80117;}
+#careerPage .joblist .panel .panel-heading {padding:15px;}
+#careerPage .panel-collapse {background: #F2F2F2;}
+
+@media (min-width: 768px) {
+    #careerPage > .title h1 {padding: 50px 0; font-size: 30px; padding-right: 10px;}
+    #careerPage .joblist {margin: 30px 0 100px 0;}
+    #careerPage .joblist h4 a {font-size:16px;}
+}
+
+@media (min-width: 1200px) {
+    #careerPage {margin-top: 68px;}
+}
+
+@media (width: 1920px) {
+    #careerPage {margin-top: 98px;}
+}
+
+
+#pricingPage {margin-top: 60px;}
+#pricingPage > .title {background: #F2F2F2;}
+#pricingPage > .title h1 {color: #b80117; font-size: 20px; text-transform: uppercase; padding: 30px 0;margin: 0;}
+#pricingPage-tab {margin:30px 0 0 0;}
+#smePage-tab {margin:30px 0 0 0;}
+#-tab {margin:30px 0 0 0;}
+#pricingPage .tab-pane {padding:30px 0;}
+#pricingPage .tab-pane .container{padding: 0;}
+#pricingPage .row {padding-top:20px;}
+#pricingPage .package .row {padding-top:0px;}
+#pricingPage .item {background-color: #f6f6f6;margin-bottom:15px;padding-bottom:15px;}
+#pricingPage h2{font-size: 25px; margin:0; }
+.pricingPageh2{font-size: 25px; margin:0; padding-bottom:15px;}
+/*#pricingPage h3{background-color: #b80117;font-size: 18px; color: #fff;padding: 10px 0; text-align: center; margin:0;}*/
+#pricingPage .item .img {height: 90px; text-align: center; margin-top: 20px;}
+#pricingPage .item .img img {max-height: 90px;}
+#pricingPage .price {font-size: 16px; text-align: center; margin: 10px 0 0 0;}
+#pricingPage .pricing-terms {font-size:16px;padding:0 0 0 20px;}
+#pricingPage .pricetable {padding-top: 10px;}
+#pricingPage .pricetable .row {margin: 0 15px; padding:0 10px;}
+#pricingPage .pricetable .row .col-xs-4 , #pricingPage .pricetable .row .col-xs-6 {padding:0;}
+#pricingPage .pricetable .title {border-bottom: 2px solid #ccc;}
+#pricingPage .pricetable .title p {font-size: 15px; font-weight: bold; margin: 0 0 5px 0;}
+#pricingPage .pricetable .content {border-bottom: 1px solid #ccc; margin-top: 10px;}
+#pricingPage .pricetable .no-border {border-bottom: 0px;}
+#pricingPage .pricetable .content p {margin-bottom: 5px;}
+#pricingPage .pricetable p small {font-size: 10px;}
+#pricingPage #bagAndShoeSpa .img {margin-top: 50px;}
+#pricingPage #bagAndShoeSpa .item {margin-bottom: 10px;}
+#pricingPage #houseItems .item {padding-bottom: 10px;}
+#pricingPage #houseItems .item .price .row {margin:0 10px;}
+#pricingPage #houseItems .item .price .col-xs-5,#pricingPage #houseItems .item .price .col-xs-7 {padding:0;}
+#pricingPage #houseItems .item .price p {font-size: 18px; text-align: inherit;}
+
+#pricingPage .package .items {position:relative; padding:20px 0 0 0; margin:15px 0; border:1px solid #dedede;}
+#pricingPage .package .items:hover {border:1px solid #b80117;}
+#pricingPage .package .items .icon {position:absolute; top:-8px; left:-8px;}
+#pricingPage .package .items .img {text-align:center;}
+#pricingPage .package .items .img img {margin:auto;}
+#pricingPage .package .items .price {color:#b80117; font-size:16px; text-align:center; padding:25px 0 10px 0;}
+#pricingPage .package .items .detail {font-size:13px; padding:10px; background: #F9F9F9;}
+#pricingPage .package .items .detail ul {margin:0; padding:5px 0 0 10px;}
+#pricingPage .package .items .detail li {padding:2px 0; list-style:none;}
+#pricingPage .package .items .name {font-size:15px; font-weight:bold; padding:10px 20px; border-bottom: 1px solid #ccc;}
+#pricingPage .package .modal-body {padding: 20px 50px 30px 50px;}
+#pricingPage .package .items .buyBox {padding:10px; font-size:20px; color: #b80117; background: #F2F2F2;}
+#pricingPage .package .items .buyBox .buyPrice {padding:10px 0 15px 20px; font-size:16px;}
+#pricingPage .package .items .buyBox .buyPrice2 {padding:10px 0 0 10px;}
+#pricingPage .package .items .buyBox .buyIcon {padding:5px 0 0 0;}
+#pricingPage .package .items .buyBox .btnBuy {padding:0 10px 0 0;}
+#pricingPage .package .items .buyBox .buyButton {padding:0 5px 0 0;}
+#pricingPage .package .items .buyBox .buy {display:block; background-color: #b80117; border: 1px solid #b80117; border-radius: 5px; color: #fff; font-size:20px; letter-spacing: 1px; margin:0; padding: 10px 0; text-align:center;}
+#pricingPage .package .items .buyBox .buy:hover {opacity:0.8;}
+
+#pricingPage #dustMite #dustMiteC .item {padding:25px; background:#FFF; text-align:center; font-size:16px; line-height:22px;}
+#pricingPage #dustMite #dustMiteC .BdRL {height:100px; padding-top:25px; border-top:1px dashed #B51D22; border-bottom:1px dashed #B51D22;}
+
+#pricingPage #dustMite #dustMiteC2 h3 {font-size:17px; line-height:22px; font-weight:bold; padding:25px 0 10px 0;color:#B80117; background:#FFF;}
+#pricingPage #dustMite #dustMiteC2 .item {padding:10px 0; background:#FFF; font-size:15px; line-height:23px;}
+#pricingPage #dustMite #dustMiteC2 .item img {width:60%; margin:auto;}
+#pricingPage #dustMite #dustMiteC2 .item ul {padding:0;}
+#pricingPage #dustMite #dustMiteC2 .item li {list-style:none; padding:10px 0 0 20px; background:url('../../images/pricing/dustmite/bullet2.png') no-repeat left 16px;}
+
+#pricingPage #dustMite #dustMiteC3 .row {padding:20px 0 0 0;}
+#pricingPage #dustMite #dustMiteC3 h2 span {color:#B80117;}
+#pricingPage #dustMite #dustMiteC3 .item-lr {margin-top:40px; padding:0 0 0 5px; border-top:10px solid #B80117; border-bottom:10px solid #B80117;}
+#pricingPage #dustMite #dustMiteC3 .item-l {padding:40px 0 20px 10px; background:#FFF; font-size:22px; line-height:22px; color:#555;}
+#pricingPage #dustMite #dustMiteC3 .item-l h3 {font-size:18px; background:none; font-weight:bold; color:#555; padding:0 0 20px 0; text-align:center;}
+#pricingPage #dustMite #dustMiteC3 .item-l .row {padding:15px; height:80px;}
+#pricingPage #dustMite #dustMiteC3 .item-l .row2 {padding:15px; height:80px;}
+#pricingPage #dustMite #dustMiteC3 .item-l .text-right {text-align:right; padding:10px 0 0 0; font-size:16px;}
+#pricingPage #dustMite #dustMiteC3 .item-l .text-right2 {text-align:right; padding:5px 0 0 0; font-size:16px;}
+#pricingPage #dustMite #dustMiteC3 .item-l .text-center {text-align:center;}
+
+#pricingPage #dustMite #dustMiteC3 .item-r {padding:40px 10px 30px 0; background:#EEE; font-size:22px; line-height:22px; color:#555;}
+#pricingPage #dustMite #dustMiteC3 .item-r h3 {font-size: 18px; background:none; font-weight:bold; color:#555; padding:0 0 20px 0; text-align:center;}
+#pricingPage #dustMite #dustMiteC3 .item-r .row {padding:15px; height:80px;}
+#pricingPage #dustMite #dustMiteC3 .item-r .row2 {padding:15px; height:110px;}
+#pricingPage #dustMite #dustMiteC3 .item-r .text-left {padding:0 0 0 10px; font-size:16px;}
+#pricingPage #dustMite #dustMiteC3 .item-r .text-left2 {padding:5px 0 0 10px; font-size:16px;}
+#pricingPage #dustMite #dustMiteC3 .item-r .text-center {text-align:center;}
+
+#pricingPage #dustMite #dustMiteC4 {padding:40px 0 20px 0;}
+#pricingPage #dustMite #dustMiteC4 .col-sm-3 img {margin:10px auto;}
+
+#pricingPage #dustMite #dustMiteC5 .col-sm-4 {text-align:center;}
+#pricingPage #dustMite #dustMiteC5 .col-sm-4 img {margin:30px auto 20px auto;}
+#pricingPage #dustMite #dustMiteC5 p {font-size:15px; line-height:22px;}
+#pricingPage #dustMite #dustMiteC5 .cusName {margin:15px 0 20px 0; font-size:14px; line-height: 1.3; color:#B80117; /*background: url('../../images/pricing/dustmite/bg-name.png') no-repeat center center; */}
+
+#pricingPage #dustMite #dustMiteC6 .col-sm-4 {text-align:center;}
+#pricingPage #dustMite #dustMiteC6 .col-sm-4 img {margin:30px auto 20px auto;}
+#pricingPage #dustMite #dustMiteC6 p {font-size:15px; line-height:22px;}
+#pricingPage #dustMite #dustMiteC6 .cusName {margin:15px 0 20px 0; font-size:18px; color:#B80117; background: url('../../images/pricing/dustmite/bg-name.png') no-repeat center center;}
+
+
+@media (min-width: 768px) {
+    #pricingPage > .title h1 {padding: 50px 0; font-size: 30px; padding-right: 10px;}
+    #pricingPage-tab {margin:40px 0;}
+    #pricingPage-tab .container {padding:0;}
+    #pricingPage .tab-pane {padding:30px 0;}
+    #pricingPage .row {padding-top:30px;margin:0;}
+    #pricingPage .row .col-sm-3 {padding: 0 5px;}
+   /* #pricingPage h3 {padding: 10px 0;font-size: 20px;}*/
+    #pricingPage .price {font-size: 16px;}
+
+    #smePage-tab {margin:40px 0;}
+    #smePage-tab .container {padding:0;}
+
+    #-tab {margin:40px 0;}
+    #-tab .container {padding:0;}
+
+    #pricingPage .package .items {padding:35px 0 0 0; margin:20px 0;}
+    #pricingPage .package .items .price {font-size:20px;padding:30px 0 15px 0;}
+    #pricingPage .package .items .detail {font-size:13px; padding:10px; height:180px;}
+    #pricingPage .package .items .detail li {padding:2px 0;}
+    #pricingPage .package .items .name {font-size:18px; padding:15px 30px;}
+    #pricingPage .package .modal-body {padding: 20px 50px 30px 50px;}
+
+    #pricingPage #dustMite #dustMiteC .item {padding:20px; font-size:16px; line-height:20px;}
+    #pricingPage #dustMite #dustMiteC .BdRL {height:160px; padding-top:50px; border-left:1px dashed #B51D22; border-right:1px dashed #B51D22; border-top:0; border-bottom:0;}
+    #pricingPage #dustMite #dustMiteC2 h3 {font-size:16px; height:105px; line-height:22px; padding:35px 0 20px 0;}
+    #pricingPage #dustMite #dustMiteC2 .item {padding:25px 0; font-size:14px; line-height:23px;}
+    #pricingPage #dustMite #dustMiteC2 .item img {width:100%; margin:auto;}
+    #pricingPage #dustMite #dustMiteC2 .item li {padding:5px 0 0 20px; background:url('../../images/pricing/dustmite/bullet2.png') no-repeat left 12px;}
+
+    #pricingPage #dustMite #dustMiteC3 .item-lr {margin-top:40px; border-top:5px solid #B80117; border-bottom:5px solid #B80117;}
+    #pricingPage #dustMite #dustMiteC3 .item-l {padding:40px 30px 20px 25px; font-size:22px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l h3 {font-size: 20px; padding:0 0 20px 0; text-align:left;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .row {padding:15px 0; height:90px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .row2 {padding:15px 0; height:110px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .text-right {padding:15px 0 0 0; font-size:16px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .text-right2 {padding:5px 0 0 0; font-size:16px;}
+
+    #pricingPage #dustMite #dustMiteC3 .item-r {padding:40px 30px 20px 25px; font-size:22px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r h3 {font-size: 20px; padding:0 0 20px 0; text-align:left;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .row {padding:15px 0; height:90px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .row2 {padding:15px 0; height:110px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .text-left {padding:0 0 0 5px; font-size:16px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .text-left2 {padding:5px 0 0 5px; font-size:16px;}
+
+    #pricingPage #dustMite #dustMiteC4 .col-sm-3 {padding:0 15px;}
+    #pricingPage #dustMite #dustMiteC4 .col-sm-3 img {margin:10px auto 20px auto;}
+
+    #pricingPage #dustMite #dustMiteC5 .col-sm-4 img {margin:10px auto 20px auto;}
+    #pricingPage #dustMite #dustMiteC5 .col-sm-4 br {display:none;}
+    #pricingPage #dustMite #dustMiteC5 p {height:120px; font-size:16px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC5 p.padt {padding-top:20px;}
+    #pricingPage #dustMite #dustMiteC5 .cusName {margin:20px 0 0 0; font-size:20px;}
+}
+
+@media (min-width: 1200px) {
+    #pricingPage {margin-top: 68px;}
+    #pricingPage-tab {margin:40px 0;}
+    #smePage-tab {margin:40px 0;}
+    #-tab {margin:40px 0;}
+    #pricingPage .tab-pane {padding:50px 0;}
+    #pricingPage .tab-pane .container{padding: 0 15px;}
+    #pricingPage .row {padding-top:50px;}
+    #pricingPage .item {margin-bottom:15px;}
+    #pricingPage h2 {font-size: 22px;}
+    .pricingPageh2 {font-size: 22px;}
+    #pricingPage .item {margin-bottom:25px;}
+    /*#pricingPage h3 {padding: 10px 0; font-size: 23px;}*/
+    #pricingPage .price {font-size: 20px;}
+    #pricingPage .package .row {padding-top:0px;}
+
+    #pricingPage #dustMite #dustMiteC .item {padding:25px; font-size:22px; line-height:26px;}
+    #pricingPage #dustMite #dustMiteC .BdRL {height:160px; padding-top:50px; border-left:1px dashed #B51D22; border-right:1px dashed #B51D22; border-top:0; border-bottom:0;}
+
+    #pricingPage #dustMite #dustMiteC2 h3 {font-size:20px; line-height:26px; padding:35px 0 20px 0;}
+    #pricingPage #dustMite #dustMiteC2 .item {padding:25px 0; font-size:16px; line-height:23px;}
+    #pricingPage #dustMite #dustMiteC2 .item img {width:100%; margin:auto;}
+    #pricingPage #dustMite #dustMiteC2 .item li {padding:15px 0 0 25px; background:url('../../images/pricing/dustmite/bullet.png') no-repeat left 21px;}
+
+    #pricingPage #dustMite #dustMiteC3 .item-lr {margin-top:40px;  border-top:5px solid #B80117; border-bottom:5px solid #B80117;}
+    #pricingPage #dustMite #dustMiteC3 .item-l {padding:40px 30px 20px 25px; font-size:22px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l h3 {font-size: 24px; padding:0 0 20px 0;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .row {padding:15px 0; height:100px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .text-right {padding:15px 0 0 0; font-size:20px;}
+    #pricingPage #dustMite #dustMiteC3 .item-l .text-right2 {padding:5px 0 0 0; font-size:20px;}
+
+    #pricingPage #dustMite #dustMiteC3 .item-r {padding:40px 30px 20px 25px; font-size:22px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r h3 {font-size: 24px; padding:0 0 20px 0;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .row {padding:15px 0; height:100px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .text-left {padding:0; font-size:20px;}
+    #pricingPage #dustMite #dustMiteC3 .item-r .text-left2 {padding:15px 0 0 0; font-size:20px;}
+
+    #pricingPage #dustMite #dustMiteC4 .col-sm-3 img {margin:10px auto 20px auto;}
+
+    #pricingPage #dustMite #dustMiteC5 .col-sm-4 img {margin:10px auto 20px auto;}
+    #pricingPage #dustMite #dustMiteC5 p {height:90px; font-size:18px; line-height:22px;}
+    #pricingPage #dustMite #dustMiteC5 p.padt {padding-top:10px;}
+    #pricingPage #dustMite #dustMiteC5 .cusName {margin:20px 0 0 0; font-size:22px;}
+
+}
+
+#cleanclothes {margin-top: 60px;}
+#cleanclothes > .title {background-color: #f2f2f2; padding: 20px 0; margin-bottom: 0px;}
+#cleanclothes > .title h1 {color: #b80117; margin:0; text-transform: uppercase; font-size: 20px;}
+#cleanclothes .hero img {width: 100%;}
+#cleanclothes .button-group {margin: 20px 0;}
+#cleanclothes .button-group button {color: #fff; padding: 15px 30px; width: 100%; margin-bottom: 10px; font-size: 15px;}
+#cleanclothes .button-group .col-sm-6:last-child {text-align: right;}
+#cleanclothes .maps h1 {margin:0 0 20px 0; font-size:20px;}
+#cleanclothes .maps .button-group {text-align: center; margin-top: 20px; margin-bottom: 40px;}
+#cleanclothes .maps .button-group button {font-size: 15px; margin: 5px 0; padding:5px 0; text-align:center; width:100%;}
+#cleanclothes .signup {margin-bottom: 30px;}
+#cleanclothes .signup h1 {margin: 0; font-size:20px;}
+#cleanclothes .signup .radio {margin: 0;}
+#cleanclothes .signup p.title {margin: 20px 0; font-weight:bold; font-size: 16px;}
+#cleanclothes .signup label {font-weight:normal;}
+#cleanclothes .signup input[type="text"] {border: 1px solid #ccc; height: 30px;}
+#cleanclothes .signup .radio label {margin-right: 10px;}
+#cleanclothes .signup .guide {background:#F2F2F2; padding: 15px 20px; margin:20px 0;}
+#cleanclothes .signup .guide p {color: #b80117; margin: 5px 0;}
+#cleanclothes .signup .guide a {font-size:16px; background:#d5d4d2; height:20px; width: 20px; display: block; text-align: center; line-height: 20px; border-radius: 50%;}
+#cleanclothes .signup .form-group {position: relative;}
+#cleanclothes .signup .form-group span.glyphicon.glyphicon-calendar {position: absolute; right: 20px; line-height: 30px; color: #888;}
+#cleanclothes .signup .terms p {margin-left:0px;}
+#cleanclothes .signup .terms label {margin-bottom: 20px;}
+#cleanclothes .signup .terms label input {margin-right: 10px;}
+#cleanclothes .signup .terms label small {font-size: 16px;margin-left: 0px;}
+#cleanclothes .signup .terms a {color: #b80117;}
+#cleanclothes .signup .terms a:hover {text-decoration: underline;}
+#cleanclothes .signup .button-group button , #cleanclothes .signup .button-group a {font-size: 15px; padding: 5px 0; border-radius: 0;width: 100%;}
+#cleanclothes .signup .button-group .col-sm-5:first-child {text-align:right;}
+#cleanclothes .signup .button-group .col-sm-2 {text-align:center;}
+#cleanclothes .signup .button-group .col-sm-2 p {line-height:50px; height:50px; margin:0; font-size:16px;}
+#cleanclothes .signup .button-group .col-sm-5:last-child {text-align: left;}
+#cleanclothes .modal-header {border-bottom: none;}
+#cleanclothes .modal-body {padding:0 40px;}
+#cleanclothes .modal-body p.title {font-size: 30px;font-weight: bold;}
+#cleanclothes .modal-body p {font-size:24px;}
+
+@media (min-width: 768px) {
+    #cleanclothes > .title {padding: 50px 0; margin-bottom: 0px;}
+    #cleanclothes > .title h1 {font-size: 30px;}
+    #cleanclothes .button-group {margin: 40px 0 60px 0;}
+    #cleanclothes .button-group button {margin-bottom: 0px; font-size:20px;}
+    #cleanclothes .maps h1 {margin-bottom: 30px; font-size: 24px;}
+    #cleanclothes .maps .button-group {margin: 30px 0 100px 0;}
+    #cleanclothes .maps .button-group button {font-size:20px; margin: 0 10px;}
+    #cleanclothes .signup h1 {font-size: 24px;}
+    #cleanclothes .signup form {margin-top: 20px;}
+    #cleanclothes .signup label {font-size: 16px;}
+}
+
+@media (min-width: 1200px) {
+    #cleanclothes {margin-top:68px;}
+    #cleanclothes .maps h1 {font-size:30px;}
+    #cleanclothes .signup {margin-bottom:100px;}
+    #cleanclothes .signup h1 {font-size:24px;}
+    #cleanclothes .signup label {font-size:14px;}
+    #cleanclothes .signup .guide {padding: 15px 20px; margin:0;}
+    #cleanclothes .signup .guide p {font-size:14px;}
+    #cleanclothes .signup .guide a {font-size: 18px;}
+    #cleanclothes .signup .terms p {margin-left:21px;}
+    #cleanclothes .signup .terms label small {margin-left: 25px;}
+    #cleanclothes .signup .button-group button , #cleanclothes .signup .button-group a {padding: 10px 0; font-size: 20px; width: 190px;}
+    #cleanclothes .signup .button-group .col-sm-2 p {font-size: 24px;}
+}
+
+#howitworksPage {margin-top: 60px;}
+#howitworksPage .hero {background:#F2F2F2;}
+#howitworksPage .hero h1 {font-size:20px; padding: 30px 0; margin:0; color: #b80117; text-transform: uppercase;}
+#howitworksPage #howitworksV {margin:20px 0 0 0;}
+#howitworksPage #howitworksV h2 {font-size: 13px; line-height:20px; margin: 0 0 20px 0;}
+#howitworksPage #howitworksV #videoModal iframe {height:300px;}
+#howitworksPage #howitworksVL {padding: 0 0 20px 0;}
+#howitworksPage #howitworksVL > div {margin:15px 0;}
+#howitworksPage #howitworksVL .text-v {display:block; text-align:center; font-size:13px; color: #b80117; text-transform: uppercase; padding:10px 0;}
+#howitworksPage #howitworksVLDelivery {padding: 0 0 20px 0;}
+#howitworksPage #howitworksVLDelivery > div {margin:15px 0;}
+#howitworksPage #howitworksVLDelivery .text-v {display:block; text-align:center; font-size:13px; color: #b80117; text-transform: uppercase; padding:10px 0;}
+#howitworksPage .button-group {text-align: center;}
+#howitworksPage .modal-header {border-bottom: none;}
+#howitworksPage .modal-body img {width: 100%;}
+#howitworksPage .modal-body .feature {margin-bottom: 20px;}
+#howitworksPage .tab-pane {padding:30px 0;}
+#howitworksPage #howItWorks-tab {background:#F6F6F6;}
+#howitworksPage #howItWorks-tab1 {padding:25px 0;}
+#howitworksPage #howItWorks-tab1 h1 {font-size:30px; border-bottom:1px solid #ccc; color:#b80117; padding:15px 0 10px 0; margin: 0 0 20px 0;}
+.howitworksPage_h2 {font-size:30px; border-bottom:1px solid #ccc; color:#b80117; padding:15px 0 10px 0; margin: 0 0 20px 0;}
+#howitworksPage .img {text-align: center;}
+#howitworksPage p.title {text-transform: uppercase; font-weight: bold; font-size: 15px; text-align: center; margin: 20px 0; color:#B80016;}
+#howitworksPage p {font-size: 16px;}
+#howitworksPage p strong {color: #b80117;}
+#howitworksPage .time {background-color: #f6f6f6; padding: 50px 0;}
+#howitworksPage .time p {font-size: 18px;}
+#howitworksPage .time p.title {font-weight: bold; margin-top: 30px;}
+#howitworksPage .time img {margin-top: 0px;}
+
+@media (min-width: 768px) {
+    #howitworksPage .hero h1 {font-size: 30px; padding:50px 10px 50px 0;}
+    #howitworksPage #howitworksV {margin:30px 0;}
+    #howitworksPage #howitworksV h2 {font-size:16px; line-height:24px; margin: 0 0 30px 0;}
+    #howitworksPage #howitworksV #videoModal iframe {height:400px;}
+    #howitworksPage #howitworksVL {padding:20px 0;}
+    #howitworksPage #howitworksVL > div {margin:0;}
+    #howitworksPage #howitworksVL .text-v {font-size:20px; padding:20px 0;}
+    #howitworksPage #howitworksVLDelivery {padding:20px 0;}
+    #howitworksPage #howitworksVLDelivery > div {margin:0;}
+    #howitworksPage #howitworksVLDelivery .text-v {font-size:20px; padding:20px 0;}
+    #howitworksPage #howItWorks-tab {padding:60px 0 20px 0;}
+    #howitworksPage #howItWorks-tab1 {padding:25px 0;}
+    #howitworksPage #howItWorks-tab1 h1 {font-size:32px; padding:30px 0 15px 0; margin: 0 0 30px 0;}
+    .howitworksPage_h2 {font-size:32px; padding:30px 0 15px 0; margin: 0 0 30px 0;}
+    #howitworksPage .button-group {text-align: left;}
+    #howitworksPage .button-group .col-sm-6:nth-child(2) {text-align: right;}
+    #howitworksPage .tab-pane {padding:70px 0;}
+    #howitworksPage p.title {font-size: 18px; margin: 40px 0 20px 0;}
+    #howitworksPage .time {padding: 120px 0;}
+    #howitworksPage .time img {margin-top: 100px;}
+}
+@media (min-width: 1200px) {
+    #howitworksPage {margin-top: 68px;}
+}
+
+#location {margin-top: 60px;}
+#location > .title {background: #F2F2F2; padding: 30px 0;}
+#location > .title h1 {color: #b80117; margin: 0; text-transform: uppercase; font-size: 20px;}
+#location #locationWithLogo {height: 200px; width: 100%; background: #f6f6f6;}
+#location .searchBox {background:#ebebeb;}
+#location .searchBox > .title {padding: 20px 0; border-top: 1px solid #F2F2F2; border-bottom: 1px solid #F2F2F2; background:#FFF;}
+#location .searchBox > .title h2 {font-size: 20px; margin:0 0 10px 0; color: #b80117; text-transform: uppercase;}
+#location .searchBox > .title .form-group {position: relative; padding:0; margin: 0 0 20px 0;}
+#location .searchBox > .title .form-group input {padding-right:35px; margin-top:10px;}
+#location .searchBox > .title .form-group span.glyphicon { position:absolute; right:10px;line-height:35px; color:#ccc;}
+#location .searchBox p {font-size:13px; line-height:22px; margin-bottom:20px; color:#333;}
+#location .searchBox .button-group {text-align:center;}
+#location .searchBox .button-group img {margin: 0 0 10px 0;}
+#location .searchBox .button-group a.link {display:block; color:#fff; text-transform:uppercase; padding: 10px 0; text-align:center; margin: 0 5px; font-size:20px;}
+#location .searchBox .hotline {padding: 20px 0;}
+#location .searchBox h2 {font-size:20px; color:#b80117; margin:40px 0 0 0;}
+.locationsearchBox_h2{font-size:20px; color:#b80117; margin:40px 0 0 0;}
+#location .searchBox .result {height: 280px; margin-top:30px; overflow: hidden; overflow-y: scroll; padding:0;}
+#location .searchBox .result li {list-style:none; padding: 0 0 10px 0; margin:0;}
+#location .searchBox .result li p {padding:0 0 5px 0; margin:0;}
+#location .searchBox .result p strong {font-size:14px;}
+
+#location .kiosk {background-color: #fff; padding: 20px 0;}
+#location .kiosk h2 {text-transform: uppercase; margin: 0 0 20px 0; font-size: 20px; color: #b80117;}
+#location .kiosk .item {padding: 15px 10px 12px 10px; border: 1px solid #dedede; margin-bottom:15px;}
+#location .kiosk .item:hover {border: 1px solid #B80016;cursor: pointer;}
+#location .kiosk .item p {font-size: 13px; line-height: 20px; color: #626266; margin: 0; padding: 0 0 10px 30px;}
+#location .kiosk .item p.title {font-size: 16px; font-weight: bold; margin: 0; padding: 0 0 10px 30px; background: url('../../images/location/pin.png') no-repeat left top;}
+#location .kiosk .item p.title strong {color: #b80117;}
+#location .kiosk .button-group { text-align: center; margin: 20px 0;}
+
+#location .kiosk-address {padding-right:0px;}
+#location .kiosk-map {padding:5px 15px 0 0; margin-top: -10px; }
+#location .kiosk-map img {margin:auto; max-width: 140px; max-height: 120px;}
+
+@media (min-width: 768px) {
+    #location > .title {padding: 50px 0;}
+    #location > .title h1 {font-size: 30px;}
+    #location #locationWithLogo {height: 570px;}
+    #location .searchBox > .title {padding: 30px 0;}
+    #location .searchBox > .title h2 {font-size: 25px; margin: 5px 0 0 0;}
+    #location .searchBox > .title .form-group {margin: 0;}
+    #location .searchBox > .title .form-group input {margin-top: 0px;}
+    #location .searchBox .button-group img {margin: 60px 0 30px 0;}
+    #location .searchBox .button-group a.link {font-size: 20px; margin-bottom: 20px;}
+    #location .searchBox .hotline {padding: 40px 0;}
+    #location .searchBox h2 {font-size:20px;margin:0;}
+    .locationsearchBox_h2{font-size:20px;margin:0;}
+
+    #location .kiosk {padding: 50px 0 40px 0;}
+    #location .kiosk .col-sm-4 {padding: 0 7px;}
+    #location .kiosk h2 {font-size: 24px; margin-bottom: 30px;}
+    #location .kiosk .item {padding: 20px; margin-bottom:20px; height:170px;}
+    #location .kiosk .item p {padding: 0 0 10px 0;}
+    #location .kiosk .item p.title {font-size: 13px;}
+    #location .kiosk .button-group {margin: 80px 0 40px 0;}
+
+    #location .kiosk-address {padding-right:5px;}
+    #location .kiosk-map {padding:5px 15px 0 0;}
+
+}
+@media (min-width: 1200px) {
+    #location {margin-top: 68px;}
+    #location .searchBox > .title {padding: 30px 0;}
+    #location .searchBox > .title h2 { font-size: 25px; margin: 0;}
+    #location .searchBox > .title .form-group {margin:0;}
+    #location .searchBox > .title .form-group input {margin-top: 0px;}
+    #location .searchBox .button-group img {margin: 40px 0;}
+    #location .searchBox .button-group a.link {font-size: 25px; padding: 20px 60px; margin-bottom: 20px;}
+    #location .searchBox .button-group {text-align: left;}
+    #location .searchBox .hotline {padding: 50px 0;}
+    #location .searchBox h2 {font-size:25px;margin:0;}
+    .locationsearchBox_h2 {font-size:25px;margin:0;}
+
+    #location .kiosk {padding: 70px 0 60px 0;}
+    #location .kiosk .col-sm-4 {padding: 0 15px;}
+    #location .kiosk .item {height:180px;}
+    #location .kiosk .item p {padding: 0 0 10px 30px;}
+    #location .kiosk .item p.title {font-size: 15px;}
+}
+#promotion-list {padding:0 0 50px 0;}
+#promotion-list > div {padding:0 15px 25px 15px;}
+#promotion-list > div > a {display:block;border:1px solid #FFF;}
+#promotion-list > div > a:hover {border:1px solid #890211;}
+#highlight-promotion {padding: 0 15px 30px 15px !important;}
+#imageModal .modal-dialog {width: 100%; margin: 70px auto;}
+#bannerSlideBox  {padding:0 0 50px 0 !important;}
+
+@media (min-width: 768px) {
+    #bannerSlideBox  {padding:0 0 80px 0 !important;}
+    #imageModal .modal-dialog {width: 90%; margin: 100px auto;}
+}
+@media (min-width: 1200px) {
+    #imageModal .modal-dialog {width: 1000px; margin: 100px auto;}
+}
+
+#bfc {margin-top: 60px;}
+#bfc > .title {background-color: #f2f2f2; padding: 20px 0; margin-bottom: 0px;}
+#bfc > .title h1 {color: #b80117; margin:0; text-transform: uppercase; font-size: 20px;}
+#bfc .hero img {width: 100%;}
+#bfc .button-group {margin: 20px 0;}
+#bfc .button-group button {color: #fff; padding: 15px 30px; width: 100%; margin-bottom: 10px; font-size: 15px;}
+#bfc .button-group .col-sm-6:last-child {text-align: right;}
+#bfc .maps h1 {margin:0 0 20px 0; font-size:20px;}
+#bfc .maps .button-group {text-align: center; margin-top: 20px; margin-bottom: 40px;}
+#bfc .maps .button-group button {font-size: 15px; margin: 5px 0; padding:5px 0; text-align:center; width:100%;}
+#bfc .signup {margin-bottom: 30px;}
+#bfc .signup h1 {margin: 0; font-size:20px;}
+#bfc .signup .radio {margin: 0;}
+#bfc .signup p.title {margin: 20px 0; font-weight:bold; font-size: 16px;}
+#bfc .signup label {font-weight:normal;}
+#bfc .signup input[type="text"] {border: 1px solid #ccc; height: 30px;}
+#bfc .signup .radio label {margin-right: 10px;}
+#bfc .signup .guide {background:#F2F2F2; padding: 15px 20px; margin:20px 0;}
+#bfc .signup .guide p {color: #b80117; margin: 5px 0;}
+#bfc .signup .guide a {font-size:16px; background:#d5d4d2; height:20px; width: 20px; display: block; text-align: center; line-height: 20px; border-radius: 50%;}
+#bfc .signup .form-group {position: relative;}
+#bfc .signup .form-group span.glyphicon.glyphicon-calendar {position: absolute; right: 20px; line-height: 30px; color: #888;}
+#bfc .signup .terms p {margin-left:0px;}
+#bfc .signup .terms label {margin-bottom: 20px;}
+#bfc .signup .terms label input {margin-right: 10px;}
+#bfc .signup .terms label small {font-size: 16px;margin-left: 0px;}
+#bfc .signup .terms a {color: #b80117;}
+#bfc .signup .terms a:hover {text-decoration: underline;}
+#bfc .signup .button-group button , #bfc .signup .button-group a {font-size: 15px; padding: 5px 0; border-radius: 0;width: 100%;}
+#bfc .signup .button-group .col-sm-5:first-child {text-align:right;}
+#bfc .signup .button-group .col-sm-2 {text-align:center;}
+#bfc .signup .button-group .col-sm-2 p {line-height:50px; height:50px; margin:0; font-size:16px;}
+#bfc .signup .button-group .col-sm-5:last-child {text-align: left;}
+#bfc .modal-header {border-bottom: none;}
+#bfc .modal-body {padding:0 40px;}
+#bfc .modal-body p.title {font-size: 30px;font-weight: bold;}
+#bfc .modal-body p {font-size:24px;}
+
+@media (min-width: 768px) {
+    #bfc .topbox-hero img { display: block; margin-left: auto; margin-right: auto; text-align: center; }
+	#bfc > img  { display: block; width: 100% !important; height: auto; margin-left: auto; margin-right: auto; }
+    #bfc > .title {padding: 50px 0; margin-bottom: 0px;}
+    #bfc > .title h1 {font-size: 30px;}
+    #bfc .button-group {margin: 40px 0 60px 0;}
+    #bfc .button-group button {margin-bottom: 0px; font-size:20px;}
+    #bfc .maps h1 {margin-bottom: 30px; font-size: 24px;}
+    #bfc .maps .button-group {margin: 30px 0 100px 0;}
+    #bfc .maps .button-group button {font-size:20px; margin: 0 10px;}
+    #bfc .signup h1 {font-size: 24px;}
+    #bfc .signup form {margin-top: 20px;}
+    #bfc .signup label {font-size: 16px;}
+}
+
+@media (min-width: 1200px) {
+    #bfc .topbox-hero img { display: block; margin-left: auto; margin-right: auto; text-align: center; }
+	#bfc > img  { display: block; width: 100% !important; height: auto; margin-left: auto; margin-right: auto; }
+    #bfc {margin-top:68px;}
+    #bfc .maps h1 {font-size:30px;}
+    #bfc .signup {margin-bottom:100px;}
+    #bfc .signup h1 {font-size:24px;}
+    #bfc .signup label {font-size:14px;}
+    #bfc .signup .guide {padding: 15px 20px; margin:0;}
+    #bfc .signup .guide p {font-size:14px;}
+    #bfc .signup .guide a {font-size: 18px;}
+    #bfc .signup .terms p {margin-left:21px;}
+    #bfc .signup .terms label small {margin-left: 25px;}
+    #bfc .signup .button-group button , #bfc .signup .button-group a {padding: 10px 0; font-size: 20px; width: 190px;}
+    #bfc .signup .button-group .col-sm-2 p {font-size: 24px;}
+}
