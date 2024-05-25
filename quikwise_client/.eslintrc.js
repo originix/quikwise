@@ -14,15 +14,12 @@ module.exports = {
   ],
   rules: {
     'no-unused-vars': 'off',
-    'no-console': 'warn',
+    'no-console': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/no-unescaped-entities': 'off',
 
     'react/display-name': 'off',
-    'react/jsx-curly-brace-presence': [
-      'warn',
-      { props: 'never', children: 'never' },
-    ],
+    'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }],
 
     //#region  //*=========== Unused Import ===========
     '@typescript-eslint/no-unused-vars': 'off',
@@ -70,7 +67,6 @@ module.exports = {
             '^\\.\\./\\.\\./\\.\\.(?!/?$)',
           ],
           ['^@/types'],
-          // other that didnt fit in
           ['^'],
         ],
       },

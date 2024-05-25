@@ -1,14 +1,10 @@
 'use client';
-import { convertToExcalidrawElements } from '@excalidraw/excalidraw';
 import dynamic from 'next/dynamic';
 
-const Excalidraw = dynamic(
-  async () => (await import('@/components/excalidrawWrapper')).default,
-  {
-    ssr: false,
-    loading: () => <p>Loading...</p>,
-  },
-);
+const Excalidraw = dynamic(async () => (await import('@/components/excalidrawWrapper')).default, {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 const ExcalidrawWrapper: React.FC = () => {
   return (
     <div style={{ height: '100vh', width: '100wv' }}>

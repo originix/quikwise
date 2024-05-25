@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
+
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -20,11 +21,7 @@ export const metadata: Metadata = {
   manifest: `/favicon/site.webmanifest`,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body>{children}</body>
