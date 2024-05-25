@@ -1,0 +1,72 @@
+version: '3'
+volumes:
+  mysql-quikwise-data: {}
+  redis-quikwise-data: {}
+  caddy:
+services:
+  quikwise:
+    build:
+      context: ./quikwise
+      dockerfile: ./Dockerfile
+    image: quikwise:latest
+    container_name: quikwise
+    depends_on:
+      - database
+      - redis
+    env_file:
+      - ./.env
+    ports:
+      - "80:5000"
+    volumes:
+      - $PWD/quikwise:/app
+    command: /start-gunicorn
+    restart: always
+
+  database:
+    image: mysql/mysql-server:8.0
+    container_name: database
+    volumes:
+      - mysql-quikwise-data:/var/lib/mysql
+    env_file:
+      - ./.env
+    ports:
+      - "3306:3306"
+    command: mysqld
+    restart: always
+
+  redis:
+    image: redis:5-alpine
+    container_name: redis
+    volumes:
+      - redis-quikwise-data:/data
+      - ./redis:/etc/redis
+    env_file:
+      - ./.env
+    command: redis-server /etc/redis/redis.conf
+    restart: always
+
+  celeryworker:
+    image: quikwise:latest
+    container_name: worker
+    volumes:
+      - $PWD/quikwise:/app
+    depends_on:
+      - database
+      - redis
+    env_file:
+      - ./.env
+    command: /start-celeryworker
+    restart: always
+
+  celerybeat:
+    image: quikwise:latest
+    container_name: beat
+    volumes:
+      - $PWD/quikwise:/app
+    depends_on:
+      - database
+      - redis
+    env_file:
+      - ./.env
+    command: /start-celerybeat
+    restart: always

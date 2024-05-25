@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "ibm";
+    src: url('../fonts/ibm/IBMPlexSansThai-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "ibm", sans-serif;
+}
+
+
+input, textarea, select, .form-row p, form .button {
+    font-family: "ibm", sans-serif;
+}

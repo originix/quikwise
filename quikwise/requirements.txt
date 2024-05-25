@@ -1,0 +1,94 @@
+# Django
+django==3.2.13
+
+# Configuration
+django-environ==0.4.5
+
+# Whitenoise
+whitenoise==5.2.0
+
+# MySQL
+mysqlclient==2.0.1
+
+# Django-mysql
+django-mysql==3.8.1
+
+# WSGI Handler
+gevent==21.12.0
+gunicorn==20.0.4
+
+# Models
+django-model-utils==4.0.0
+
+# Images
+Pillow==7.2.0
+
+# https://www.django-rest-framework.org
+djangorestframework==3.13.1
+django-filter==2.3.0
+
+# JWT
+# https://github.com/davesque/django-rest-framework-simplejwt
+djangorestframework-simplejwt==4.4.0
+
+# Django Reversion
+django-reversion==5.0.1
+
+# Django Extension
+# http://chibisov.github.io/drf-extensions/docs/
+# drf-extensions==0.6.0 wait for new version
+https://github.com/chibisov/drf-extensions/archive/master.zip
+
+# Json API
+# https://github.com/django-json-api/django-rest-framework-json-api
+djangorestframework-jsonapi==5.0.0
+
+# https://django-rest-swagger.readthedocs.io/en/latest/
+# Main Contribute Not Longer Support
+# https://github.com/sang-sakarin/django-rest-swagger/archive/master.zip
+https://github.com/sang-sakarin/django-rest-swagger/archive/stable/2.1.4.zip
+
+# Raven is the Sentry client
+raven==6.9.0
+
+# Translate Model
+# https://github.com/deschler/django-modeltranslation
+django-modeltranslation==0.15.2
+
+# Time zones support
+pytz==2022.1
+
+# Static and Media Storage
+boto3==1.15.15
+django-storages==1.10.1
+
+# Background job
+celery==5.2.7
+
+# Redis
+redis==4.3.3
+django-redis==5.2.0
+
+# https://pypi.org/project/django-cors-headers/?
+django-cors-headers==3.5.0
+
+# Django Model Changed
+# https://github.com/iansprice/django-model-changes-py3
+django-model-changes-py3==0.15.1
+
+# Django Debug Toolbar
+# https://django-debug-toolbar.readthedocs.io/en/latest
+django-debug-toolbar==3.1.1
+
+# https://coverage.readthedocs.io/en/v4.5.x/cmd.html
+coverage==5.1
+
+# https://faker.readthedocs.io/en/master/
+Faker==4.1.1
+
+# https://github.com/FactoryBoy/factory_boy
+factory-boy==2.12.0
+
+# https://pypi.org/project/django-celery-beat/
+# Django Celery Beat
+django-celery-beat==2.3.0

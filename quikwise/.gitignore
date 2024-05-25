@@ -1,0 +1,11 @@
+/staticfiles
+__pycache__/
+
+celerybeat-schedule
+*pid
+
+apps/media/*
+
+.idea
+
+venv
