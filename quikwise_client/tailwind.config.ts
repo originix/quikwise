@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Noto Sans Thai', ...defaultTheme.fontFamily.sans],
+        primary: ['Noto_Sans_Thai', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

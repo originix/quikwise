@@ -3,15 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: 'Noto Sans Thai';
-    font-style: normal;
-    font-weight: 100 700;
-    font-display: block;
-    src: url('/fonts/NotoSansThai.woff2') format('woff2');
-  }
-
   /* #region  /**=========== Typography =========== */
+  body {
+    @apply font-primary;
+  }
   .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
   }

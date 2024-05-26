@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
-import { siteConfig } from '@/constant/config';
+import { defaultFont, siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html className={`${defaultFont.variable}`}>
       <body>{children}</body>
     </html>
   );
