@@ -48,14 +48,6 @@
   .text-secondary {
     @apply text-secondary-500;
   }
-
-  .text-white {
-    @apply text-white;
-  }
-
-  .text-dark {
-    @apply text-dark;
-  }
   /* #endregion  /**======== Typography =========== */
 
   .layout {

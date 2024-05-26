@@ -51,6 +51,7 @@ export default {
           900: '#0D0D0D',
         },
         dark: '#222222',
+        white: '#fff',
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
