@@ -5,7 +5,7 @@ from django.conf import settings
 from django.db import models
 from django.db.models import signals
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django_model_changes import ChangesMixin as ModelChangesMixin
 from uuid import uuid4
 
