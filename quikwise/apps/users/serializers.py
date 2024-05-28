@@ -1,5 +1,5 @@
 from .models import User
-from apps.commons.serializers import CRUDSerializer
+from apps.base.serializers import CRUDSerializer
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
@@ -21,8 +21,8 @@ class UserSerializerForm(CRUDSerializer):
         ]
 
     def validate_username(self, data):
-        UserModle = get_user_model()
-        existing = UserModle.objects.filter(username=data).exists()
+        model = get_user_model()
+        existing = model.objects.filter(username=data).exists()
         if existing:
             raise serializers.ValidationError(_('This username exists in a system.'))
         return data

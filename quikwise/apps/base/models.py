@@ -1,13 +1,11 @@
 import django.db.models.options as options
 
-from .managers import SoftDeletionManager
-from django.conf import settings
+from apps.base.managers import SoftDeletionManager
 from django.db import models
 from django.db.models import signals
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django_model_changes import ChangesMixin as ModelChangesMixin
-from uuid import uuid4
 
 options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('exclude_field_changes',)
 
@@ -21,7 +19,7 @@ class SoftDeletionModel(models.Model):
     class Meta:
         abstract = True
 
-    def delete(self):
+    def delete(self, **kwargs):
         self.deleted_at = timezone.now()
         self.save()
         signals.post_delete.send(sender=self.__class__, instance=self)
@@ -30,18 +28,15 @@ class SoftDeletionModel(models.Model):
         super(SoftDeletionModel, self).delete()
 
 
-class ControlModel(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Created at'))
-    updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Updated at'))
-    created_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, related_name="%(class)s_created_user", verbose_name=_('Created User'))
-    updated_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, related_name="%(class)s_updated_user", verbose_name=_('Updated User'))
+class TimestampModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created at'))
+    updated_at = models.DateTimeField(auto_now=True, verbose_name=_('updated at'))
 
     class Meta:
         abstract = True
 
 
-class SoftControlModel(ControlModel, SoftDeletionModel):
-    uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
+class SoftControlModel(TimestampModel, SoftDeletionModel):
 
     class Meta:
         abstract = True
@@ -53,17 +48,7 @@ class SoftControlModel(ControlModel, SoftDeletionModel):
         return super(SoftControlModel, self).unique_error_message(model_class, unique_check)
 
 
-class HardControlModel(ControlModel):
-    uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
-
-    class Meta:
-        abstract = True
-
-
-class UserControlModel(models.Model):
-    uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("Created at"))
-    updated_at = models.DateTimeField(auto_now=True, verbose_name=_("Updated at"))
+class ControlModel(TimestampModel):
 
     class Meta:
         abstract = True
@@ -71,10 +56,7 @@ class UserControlModel(models.Model):
 
 class ChangesMixin(ModelChangesMixin):
 
-    default_exclude_field_changes = [
-        'created_user',
-        'updated_user'
-    ]
+    default_exclude_field_changes = []
 
     def current_state(self):
         """

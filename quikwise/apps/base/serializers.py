@@ -23,7 +23,8 @@ class ChoicesField(serializers.Field):
 
 
 class AutomaticFieldMixin(object):
-    def automatic_fields(self, request, instance, validated_data):
+    @staticmethod
+    def automatic_fields(request, instance, validated_data):
         # control model
         # CASE CREATE: update set created_user
         # CASE UPDATE: update set updated_user and updated_at
@@ -101,7 +102,7 @@ class CRUDSerializer(serializers.ModelSerializer):
         # pre-update instance
         self.pre_update(instance, validated_data)
 
-        # Automatic assing data fields
+        # Automatic assign data fields
         if self.context.get('request', None):
             self.automatic_fields(self.context['request'], instance, validated_data)
 

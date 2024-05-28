@@ -52,7 +52,6 @@ THIRD_PARTY_APPS = [
     'reversion',
     'rest_framework_extensions',
     'django_filters',
-    'rest_framework_swagger',  # Swagger
     'raven.contrib.django.raven_compat',
     'modeltranslation',
     'corsheaders',
@@ -275,7 +274,7 @@ REST_FRAMEWORK = {
     # Custom Exception Handler
     # 'EXCEPTION_HANDLER': 'cores.utils.exception_handler.custom_exception_handler',
     # 'EXCEPTION_HANDLER': 'rest_framework_json_api.exceptions.exception_handler',
-    'EXCEPTION_HANDLER': 'apps.commons.utils.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'apps.base.exceptions.exception_handler',
 
     'PAGE_SIZE': API_PAGE_SIZE,
     'PAGINATE_BY_PARAM': API_PAGINATE_BY_PARAM,
@@ -284,7 +283,7 @@ REST_FRAMEWORK = {
 
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework_json_api.pagination.PageNumberPagination',
-    'DEFAULT_PAGINATION_CLASS': 'apps.commons.api_json.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'apps.base.pagination.PageNumberPagination',
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework_json_api.parsers.JSONParser',
         'rest_framework.parsers.FormParser',

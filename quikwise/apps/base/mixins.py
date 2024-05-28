@@ -1,4 +1,4 @@
-from .decorators import check_in_attributes
+from apps.base.decorators import check_in_attributes
 
 
 class TestSerializerMixin:
