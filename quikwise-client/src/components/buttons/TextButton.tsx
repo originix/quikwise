@@ -1,14 +1,12 @@
-import * as React from 'react';
-
 import { cn } from '@/lib/utils';
-
-const TextButtonVariant = ['primary', 'basic'] as const;
+import { ButtonVariant } from '@/constant/button';
+import { ComponentPropsWithRef, forwardRef } from 'react';
 
 type TextButtonProps = {
-  variant?: (typeof TextButtonVariant)[number];
-} & React.ComponentPropsWithRef<'button'>;
+  variant?: keyof typeof ButtonVariant;
+} & ComponentPropsWithRef<'button'>;
 
-const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
+const TextButton = forwardRef<HTMLButtonElement, TextButtonProps>(
   ({ children, className, variant = 'primary', disabled: buttonDisabled, ...rest }, ref) => {
     return (
       <button

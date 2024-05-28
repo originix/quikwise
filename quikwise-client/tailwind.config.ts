@@ -10,21 +10,21 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Noto_Sans_Thai', ...defaultTheme.fontFamily.sans],
+        primary: ['var(--default-font)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
-          '50': '#f6faf3',
-          '100': '#e9f5e3',
-          '200': '#d3eac8',
-          '300': '#afd89d',
-          '400': '#82bd69',
-          '500': '#61a146',
-          '600': '#4c8435',
-          '700': '#3d692c',
-          '800': '#345427',
-          '900': '#2b4522',
-          '950': '#13250e',
+          '50': '#eff9ff',
+          '100': '#def1ff',
+          '200': '#b6e5ff',
+          '300': '#75d2ff',
+          '400': '#2cbcff',
+          '500': '#00a9ff',
+          '600': '#0082d4',
+          '700': '#0067ab',
+          '800': '#00578d',
+          '900': '#064974',
+          '950': '#042e4d',
         },
         secondary: {
           50: '#FFF4F0',

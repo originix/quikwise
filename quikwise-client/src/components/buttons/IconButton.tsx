@@ -1,42 +1,30 @@
 import { LucideIcon } from 'lucide-react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
-import { ComponentPropsWithRef, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
-import { ButtonSize, ButtonVariant } from '@/constant/button';
+import { ButtonVariant } from '@/constant/button';
+import { ComponentPropsWithRef, forwardRef } from 'react';
 
-type ButtonProps = {
+type IconButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
-  size?: keyof typeof ButtonSize;
-  leftIcon?: IconType | LucideIcon;
-  rightIcon?: IconType | LucideIcon;
+  icon?: IconType | LucideIcon;
   classNames?: {
-    leftIcon?: string;
-    rightIcon?: string;
+    icon?: string;
   };
-  full?: boolean;
-  onClick: (e: MouseEvent<HTMLInputElement>) => void;
-  type?: 'button' | 'submit';
 } & ComponentPropsWithRef<'button'>;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (
     {
-      children,
       className,
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
-      size = 'base',
       isDarkBg = false,
-      leftIcon: LeftIcon,
-      rightIcon: RightIcon,
+      icon: Icon,
       classNames,
-      full = false,
-      onClick,
-      type = 'button',
       ...rest
     },
     ref,
@@ -45,28 +33,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
-        onClick={onClick}
         ref={ref}
-        type={type}
+        type='button'
         disabled={disabled}
         className={cn(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center justify-center rounded font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
-          //#region  //*=========== Size ===========
-          [
-            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
-            size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
-            full && ['w-full text-center justify-center'],
-          ],
-          //#endregion  //*======== Size ===========
+          'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
               'bg-primary-500 text-white',
               'border-primary-600 border',
-              'hover:bg-primary-600',
+              'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
             ],
@@ -113,32 +94,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {LeftIcon && (
-          <div className={cn([size === 'base' && 'mr-1', size === 'sm' && 'mr-1.5'])}>
-            <LeftIcon
-              size='1em'
-              className={cn(
-                [size === 'base' && 'md:text-md text-md', size === 'sm' && 'md:text-md text-sm'],
-                classNames?.leftIcon,
-              )}
-            />
-          </div>
-        )}
-        {children}
-        {RightIcon && (
-          <div className={cn([size === 'base' && 'ml-1', size === 'sm' && 'ml-1.5'])}>
-            <RightIcon
-              size='1em'
-              className={cn(
-                [size === 'base' && 'text-md md:text-md', size === 'sm' && 'md:text-md text-sm'],
-                classNames?.rightIcon,
-              )}
-            />
-          </div>
-        )}
+        {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </button>
     );
   },
 );
 
-export default Button;
+export default IconButton;
