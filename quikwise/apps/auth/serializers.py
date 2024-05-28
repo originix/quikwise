@@ -1,32 +1,29 @@
-from apps.commons.custom_responses import CustomResponse
+from apps.base.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken, UntypedToken
 from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 
 
-class TokenObtainPairCustomSerializer(TokenObtainPairSerializer):
+class AUthLoginSerializer(TokenObtainPairSerializer):
 
     @classmethod
     def get_token(cls, user):
         return RefreshToken.for_user(user)
 
     def validate(self, attrs):
-        data = CustomResponse()
 
         token = super(TokenObtainPairSerializer, self).validate(attrs)
         refresh = self.get_token(self.user)
         token['refresh'] = str(refresh)
         token['access'] = str(refresh.access_token)
 
-        return data.response_jwt_custom_success(token)
+        return Response(data=token)
 
-
-class TokenRefreshCustomSerializer(serializers.Serializer):
+class TokenRefreshSerializer(serializers.Serializer):
     refresh = serializers.CharField()
 
     def validate(self, attrs):
-        data = CustomResponse()
         refresh = RefreshToken(attrs['refresh'])
         token = {'access': str(refresh.access_token)}
 
@@ -45,14 +42,13 @@ class TokenRefreshCustomSerializer(serializers.Serializer):
 
             token['refresh'] = str(refresh)
 
-        return data.response_jwt_custom_success(token)
+        return Response(data=token)
 
 
 class TokenVerifySerializer(serializers.Serializer):
     token = serializers.CharField()
 
     def validate(self, attrs):
-        data = CustomResponse()
         UntypedToken(attrs['token'])
 
-        return data.response_jwt_custom_success({})
+        return Response(data={})

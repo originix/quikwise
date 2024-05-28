@@ -1,15 +1,14 @@
-from apps.commons.custom_jwt_simple.serializers import TokenObtainPairCustomSerializer
-from apps.commons.custom_jwt_simple.serializers import TokenRefreshCustomSerializer
-from apps.commons.custom_jwt_simple.serializers import TokenVerifySerializer
+from .serializers import AUthLoginSerializer
+from .serializers import TokenRefreshSerializer
+from .serializers import TokenVerifySerializer
 from rest_framework import generics
 from rest_framework_simplejwt.authentication import AUTH_HEADER_TYPES
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 
 
-class TokenCustomViewBase(generics.GenericAPIView):
+class AuthBase(generics.GenericAPIView):
     permission_classes = ()
     authentication_classes = ()
-
     serializer_class = None
 
     www_authenticate_realm = 'api'
@@ -31,13 +30,13 @@ class TokenCustomViewBase(generics.GenericAPIView):
         return serializer.validated_data
 
 
-class TokenObtainPairCustomView(TokenCustomViewBase):
-    serializer_class = TokenObtainPairCustomSerializer
+class AuthLoginView(AuthBase):
+    serializer_class = AUthLoginSerializer
 
 
-class TokenRefreshCustomView(TokenCustomViewBase):
-    serializer_class = TokenRefreshCustomSerializer
+class TokenRefreshView(AuthBase):
+    serializer_class = TokenRefreshSerializer
 
 
-class TokenVerifyCustomView(TokenCustomViewBase):
+class TokenVerifyView(AuthBase):
     serializer_class = TokenVerifySerializer

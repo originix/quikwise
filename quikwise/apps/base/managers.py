@@ -1,4 +1,4 @@
-from .querysets import SoftDeletionQuerySet
+from apps.base.querysets import SoftDeletionQuerySet
 from django.db import models
 
 

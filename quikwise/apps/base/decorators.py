@@ -1,5 +1,5 @@
+from apps.base.exceptions import Error
 from functools import wraps
-from .errors import Error
 
 
 def check_in_attributes(attr_names):
