@@ -1,68 +1,37 @@
-from apps.base.decorators import check_in_attributes
+from apps.base.response import Response
+from rest_framework.mixins import CreateModelMixin as BaseCreateModelMixin
+from rest_framework.mixins import RetrieveModelMixin as BaseRetrieveModelMixin
+from rest_framework.mixins import UpdateModelMixin as BaseUpdateModelMixin
+from rest_framework.mixins import DestroyModelMixin as BaseDestroyModelMixin
+from rest_framework import status
 
 
-class TestSerializerMixin:
-    """
-        Add test serializer
-    """
-    expected_fields = None
-    serializer_class = None
+class CreateModelMixin(BaseCreateModelMixin):
 
-    @check_in_attributes(["expected_fields", "serializer_class", "instance"])
-    def test_contains_expected_fields(self):
-        serializer = self.serializer_class(instance=self.instance)
-        data = serializer.data
+    def create(self, request, *args, **kwargs):
+        response = super(CreateModelMixin, self).create(request, *args, **kwargs)
 
-        self.assertEqual(set(data.keys()), set(self.expected_fields))
+        return Response(data=response.data, status=status.HTTP_201_CREATED)
 
 
-class TestModelMixin:
-    """
-        Add default test model
-    """
-    model = None
-    fields = None
-    factory_class = None
+class RetrieveModelMixin(BaseRetrieveModelMixin):
 
-    def _get_attributes(self):
-        attributes = {}
-        simple = self.factory_class.build()
+    def retrieve(self, request, *args, **kwargs):
+        response = super(RetrieveModelMixin, self).retrieve(request, *args, **kwargs)
 
-        for field in self.fields:
-            attributes.update({field: getattr(simple, field)})
+        return Response(response.data)
 
-        return attributes
 
-    @check_in_attributes(["factory_class", "fields"])
-    def test_create_model(self):
-        attributes = self._get_attributes()
-        instance = self.factory_class.create(**attributes)
+class UpdateModelMixin(BaseUpdateModelMixin):
 
-        for k, v in attributes.items():
-            self.assertEqual(getattr(instance, k), v)
+    def update(self, request, *args, **kwargs):
+        response = super(UpdateModelMixin, self).update(request, *args, **kwargs)
 
-    @check_in_attributes(["factory_class", "fields"])
-    def test_update_model(self):
-        attributes = self._get_attributes()
-        instance = self.factory_class()
+        return Response(data=response.data, status=status.HTTP_200_OK)
 
-        for k, v in attributes.items():
-            self.assertNotEqual(getattr(instance, k), v)
 
-        for k, v in attributes.items():
-            setattr(instance, k, v)
+class DestroyModelMixin(BaseDestroyModelMixin):
+    def destroy(self, request, *args, **kwargs):
+        response = super(DestroyModelMixin, self).destroy(request, *args, **kwargs)
 
-        for k, v in attributes.items():
-            self.assertEqual(getattr(instance, k), v)
-
-    @check_in_attributes(["factory_class", "model"])
-    def test_delete_model(self):
-        self.factory_class.create()
-        queryset = self.model.objects.all()
-
-        self.assertEqual(1, queryset.count())
-
-        queryset.delete()
-        count = self.model.objects.all().count()
-
-        self.assertEqual(count, 0)
+        return Response(data=response.data, status=status.HTTP_204_NO_CONTENT)

@@ -1,6 +1,7 @@
 from apps.auth.views import AuthLoginView
 from apps.auth.views import TokenRefreshView
 from apps.auth.views import TokenVerifyView
+from apps.auth.viewsets import RegisterViewSet
 from apps.users.viewsets import UserViewSet
 from django.urls import path
 from rest_framework.routers import DefaultRouter
@@ -13,6 +14,8 @@ urlpatterns = [
     path('auth/verify/', TokenVerifyView.as_view(), name='auth_token_verify'),
 ]
 router = DefaultRouter()
+
+router.register(r'auth/register', RegisterViewSet, basename='register')
 
 # user module
 router.register(r'users', UserViewSet, basename="accounts")
