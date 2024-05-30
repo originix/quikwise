@@ -66,11 +66,8 @@ const Login: FC = () => {
             </div>
           </div>
           <div className='mt-8 space-y-6'>
-            <div className='-space-y-px'>
+            <div className='space-y-2'>
               <div>
-                {/*<label htmlFor='email' className='sr-only'>*/}
-                {/*  Email*/}
-                {/*</label>*/}
                 <div className='relative'>
                   <InputText
                     register={register}
@@ -83,9 +80,6 @@ const Login: FC = () => {
                 </div>
               </div>
               <div>
-                {/*<label htmlFor='password' className='sr-only'>*/}
-                {/*  Password*/}
-                {/*</label>*/}
                 <div className='mt-1 relative'>
                   <InputText
                     register={register}
@@ -95,7 +89,7 @@ const Login: FC = () => {
                     type={showPassword ? 'text' : 'password'}
                     placeholder='Your password'
                   />
-                  <div className='absolute inset-y-0 right-0 pr-3 flex items-center'>
+                  <div className='absolute inset-y-0 right-0 pr-3 flex items-start top-[10.5px]'>
                     <button
                       type='button'
                       onClick={togglePasswordVisibility}

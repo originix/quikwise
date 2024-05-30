@@ -1,6 +1,12 @@
 import { FieldErrors } from 'react-hook-form/dist/types/errors';
-import { UseFormRegister, UseFormSetFocus, UseFormSetValue } from 'react-hook-form/dist/types/form';
+import {
+  UseFormGetValues,
+  UseFormRegister,
+  UseFormSetFocus,
+  UseFormSetValue,
+} from 'react-hook-form/dist/types/form';
 import { FieldValues } from 'react-hook-form/dist/types/fields';
+import { EBaseDropdownReducer } from '@/constant/dropdown';
 
 export interface IBaseDropdown {
   text: ReactNode;
@@ -10,9 +16,12 @@ export interface IBaseDropdown {
 export interface IBaseProps {
   errors?: FieldErrors;
   name: string;
-  register: UseFormRegister<FieldValues>;
+  register?: UseFormRegister<FieldValues>;
   setValue?: UseFormSetValue;
   setFocus?: UseFormSetFocus;
+  getValues?: UseFormGetValues;
+  label?: string;
+  placeholder?: string;
 }
 
 export interface IDropdownProps extends IBaseProps {
@@ -28,4 +37,9 @@ export interface IDropdownProps extends IBaseProps {
   enableSearch?: boolean;
   isMultiselect?: boolean;
   isObject?: boolean;
+}
+
+export interface TIDropdownReducer {
+  type: EBaseDropdownReducer;
+  payload: IBaseDropdown;
 }

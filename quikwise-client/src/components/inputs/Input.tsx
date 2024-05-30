@@ -9,7 +9,6 @@ interface IInputProps extends IBaseProps {
   onChange?: (
     event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement> | string,
   ) => void;
-  placeholder?: string;
   disabled?: boolean;
   width?: string;
   borderRadius?: 'rounded' | 'semi' | 'none';
@@ -37,6 +36,7 @@ const InputText: FC<IInputProps> = ({
   register,
   inputClassName,
   setFocus,
+  label,
 }) => {
   const borderRadiusClass = () => {
     switch (borderRadius) {
@@ -45,7 +45,7 @@ const InputText: FC<IInputProps> = ({
       case 'semi':
         return 'rounded-md border-gray-300 focus:ring-primary-600';
       case 'none':
-        return 'rounded-none border-transparent focus:ring-transparent active:ring-transparent';
+        return 'border-transparent focus:ring-transparent active:ring-transparent';
       default:
         return '';
     }
@@ -57,17 +57,18 @@ const InputText: FC<IInputProps> = ({
 
   return (
     <>
+      {label && <label className='label'>{label}</label>}
       <div
         className={`flex items-center gap-2 justify-start relative bg-transparent ${width} ${borderRadiusClass()} ${className}`}
       >
         {Icon && <Icon className='w-[28.55px] absolute left-2 text-gray-400' />}
         <input
-          {...register(name)}
+          {...(register ? register(name) : {})}
           readOnly={readOnly}
           className={cn([
             inputClassName,
             Icon ? 'pl-10' : '',
-            `border-gray-300 resize-none focus:border-transparent outline-none text-black transition-all duration-200 ease-in-out w-full placeholder-gray-400 text-md`,
+            `border-gray-300 resize-none focus:border-transparent outline-none text-black transition-all duration-200 ease-in-out w-full placeholder-gray-400`,
             `${borderRadiusClass()}`,
           ])}
           type={type}

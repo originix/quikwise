@@ -48,6 +48,9 @@
     a {
         @apply hover:text-primary-600 active:text-primary-600;
     }
+    div, span, input {
+        @apply text-base;
+    }
 
     /* #endregion  /**======== Typography =========== */
     .layout {

@@ -13,6 +13,7 @@ export default function Home() {
     formState: { errors },
     setValue,
     setFocus,
+    getValues,
   } = useForm();
 
   async function onSelect(e) {
@@ -36,21 +37,23 @@ export default function Home() {
           errors={errors}
           type='email'
           placeholder='you@example.com'
+          label='Email'
         />
         <Dropdown
           options={[
             { text: 'a', value: 1 },
             { text: 'b', value: 2 },
+            { text: 'c', value: 3 },
           ]}
-          enableSearch
           isMultiselect
           onSelect={onSelect}
-          isObject
           register={register}
           name='drop-test'
+          label='Drop Test'
           errors={errors}
           setValue={setValue}
           setFocus={setFocus}
+          getValues={getValues}
         />
         <Button onClick={handleSubmit(test)}>กด</Button>
         <div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none'>
