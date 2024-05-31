@@ -10,6 +10,9 @@ class UserAdmin(UserAdmin):
         (_('Personal info'), {'fields': ('username', 'name', 'email', 'password')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser'),
+        }),
+        (_('Activity'), {
+            'fields': ('created_at', 'updated_at', 'last_login', 'date_joined'),
         })
     )
 
@@ -17,6 +20,13 @@ class UserAdmin(UserAdmin):
         'username',
         'name',
         'email'
+    ]
+
+    readonly_fields = [
+        'created_at',
+        'updated_at',
+        'last_login',
+        'date_joined'
     ]
 
     def has_delete_permission(self, request, obj=None):
