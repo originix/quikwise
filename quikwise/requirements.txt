@@ -48,6 +48,8 @@ djangorestframework-jsonapi==7.0.0
 # https://github.com/sang-sakarin/django-rest-swagger/archive/master.zip
 # https://github.com/sang-sakarin/django-rest-swagger/archive/stable/2.1.4.zip
 
+coreapi==2.3.3
+
 # Raven is the Sentry client
 raven==6.10.0
 

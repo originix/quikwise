@@ -3,11 +3,12 @@ from rest_framework.views import exception_handler as base_exception_handler
 
 def get_error_description(error):
     if type(error) == list:
-        return [e.title() for e in error]
+        return [e.capitalize() for e in error]
 
-    return [error.title()]
+    return [error.capitalize()]
 
 def get_error_code(error):
+
     if type(error) == list:
         return " ".join([e.code for e in error])
 
@@ -36,9 +37,10 @@ def set_errors_exception_handler(e):
 def exception_handler(exc, context):
     response = base_exception_handler(exc, context)
 
-    messages, errors = set_errors_exception_handler(response.data)
+    if response:
+        messages, errors = set_errors_exception_handler(response.data)
 
-    return Response(status=response.status_code, message=messages, errors=errors)
+        return Response(status=response.status_code, message=messages, errors=errors)
 
 
 class Error(Exception):

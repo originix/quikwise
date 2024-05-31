@@ -31,8 +31,6 @@ class PageNumberPagination(BasePageNumberPagination):
             ('total', self.page.paginator.count),
         ])
 
-        print(data)
-
         return Response(data=data, meta=meta, status=status.HTTP_200_OK)
 
 class MaxPagination(PageNumberPagination):

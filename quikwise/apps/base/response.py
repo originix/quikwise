@@ -12,8 +12,6 @@ class Response(BaseResponse):
 
         self.data = self.custom_data()
 
-        print(self.data)
-
     def custom_data(self):
         data = {'message': self.message, 'data': self.data}
 
