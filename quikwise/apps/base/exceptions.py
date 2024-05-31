@@ -3,9 +3,9 @@ from rest_framework.views import exception_handler as base_exception_handler
 
 def get_error_description(error):
     if type(error) == list:
-        return [e.title() for e in error]
+        return [e.capitalize() for e in error]
 
-    return [error.title()]
+    return [error.capitalize()]
 
 def get_error_code(error):
 
