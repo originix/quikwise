@@ -7,7 +7,7 @@ from faker import Faker
 
 fake = Faker()
 
-class TestCommunityViewSet(APITestCase):
+class TestRegisterViewSet(APITestCase):
 
     def setUp(self):
         pass
