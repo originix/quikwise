@@ -9,4 +9,5 @@ class OrganizationViewSet(CRUDViewSetMixin):
     serializer_class = OrganizationSerializer
     serializer_detail_class = OrganizationSerializer
     permission_classes = (OrganizationPermission, )
+    pagination_class = None
     lookup_field = 'name'
