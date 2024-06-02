@@ -1,6 +1,8 @@
 import reversion
 
 from apps.base.models import SoftControlModel
+from apps.memberships.abstracts import MembershipStatus
+from apps.memberships.abstracts import MembershipRole
 from apps.users.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -20,4 +22,7 @@ class Organization(SoftControlModel):
 
     def __str__(self):
         return self.name
+
+    def is_owner(self, user):
+        return self.membership_set.filter(user=user, status=MembershipStatus.JOINED, role=MembershipRole.OWNER).exists()
 

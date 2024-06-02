@@ -1,10 +1,9 @@
 from apps.organizations.serializers import OrganizationSerializer
 from apps.organizations.factories import OrganizationFactory
 from apps.users.factories import UserFactory
-from django.urls import reverse
 from rest_framework.test import APITestCase
-from rest_framework.test import APIRequestFactory
 from unittest.mock import patch
+from unittest.mock  import MagicMock
 from faker import Faker
 
 fake = Faker()
@@ -12,14 +11,9 @@ fake = Faker()
 class TestOrganizationSerializer(APITestCase):
 
     def setUp(self):
-        organization = OrganizationFactory()
         user = UserFactory.create()
 
-        url = reverse('api:organization-detail', kwargs={'name': organization.name})
-
-        self.factory = APIRequestFactory()
-        self.request = self.factory.get(url, format='json')
-        self.request.user = user
+        self.request = MagicMock(user=user)
 
     def test_serializing_object_user(self):
 

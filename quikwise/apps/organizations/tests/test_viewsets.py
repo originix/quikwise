@@ -1,5 +1,6 @@
 from apps.memberships.abstracts import MembershipStatus
 from apps.memberships.abstracts import MembershipRole
+from apps.memberships.models import Membership
 from apps.organizations.factories import OrganizationFactory
 from apps.organizations.models import Organization
 from django.urls import reverse
@@ -14,9 +15,13 @@ fake = Faker()
 class TestOrganizationViewSet(APITestCase):
 
     def setUp(self):
-        OrganizationFactory.create_batch(4)
+        self.organizations = OrganizationFactory.create_batch(4)
         self.user = UserFactory.create()
         self.client.force_login(self.user)
+
+        for organization in self.organizations[:-1]:
+
+            Membership.objects.create(organization=organization, user=self.user, status=MembershipStatus.JOINED)
 
     def test_list_organization(self):
         url = reverse('api:organization-list')
@@ -25,7 +30,7 @@ class TestOrganizationViewSet(APITestCase):
         response_json = response.json()
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(4, len(response_json['data']))
+        self.assertEqual(3, len(response_json['data']))
 
     def test_create_organization(self):
         url = reverse('api:organization-list')
@@ -49,6 +54,7 @@ class TestOrganizationViewSet(APITestCase):
 
     def test_get_organization(self):
         organization = OrganizationFactory.create(name='quikwise-organization')
+        Membership.objects.create(organization=organization, user=self.user, status=MembershipStatus.JOINED)
 
         url = reverse('api:organization-detail', kwargs={'name': organization.name})
 
@@ -58,6 +64,7 @@ class TestOrganizationViewSet(APITestCase):
 
     def test_update_organization(self):
         organization = OrganizationFactory.create(name='quikwise-organization')
+        Membership.objects.create(organization=organization, user=self.user, status=MembershipStatus.JOINED, role=MembershipRole.OWNER)
 
         url = reverse('api:organization-detail', kwargs={'name': organization.name})
 
@@ -73,9 +80,10 @@ class TestOrganizationViewSet(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data['name'], response_json['data']['name'])
         self.assertEqual('quikwise-new', organization.name)
-
+    #
     def test_delete_organization(self):
         organization = OrganizationFactory.create(name='quikwise-organization')
+        Membership.objects.create(organization=organization, user=self.user, status=MembershipStatus.JOINED, role=MembershipRole.OWNER)
 
         url = reverse('api:organization-detail', kwargs={'name': organization.name})
 
