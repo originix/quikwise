@@ -1,16 +1,31 @@
 from apps.organizations.serializers import OrganizationSerializer
 from apps.organizations.factories import OrganizationFactory
+from apps.users.factories import UserFactory
+from django.urls import reverse
 from rest_framework.test import APITestCase
+from rest_framework.test import APIRequestFactory
+from unittest.mock import patch
 from faker import Faker
 
 fake = Faker()
 
 class TestOrganizationSerializer(APITestCase):
 
+    def setUp(self):
+        organization = OrganizationFactory()
+        user = UserFactory.create()
+
+        url = reverse('api:organization-detail', kwargs={'name': organization.name})
+
+        self.factory = APIRequestFactory()
+        self.request = self.factory.get(url, format='json')
+        self.request.user = user
+
     def test_serializing_object_user(self):
+
         organization = OrganizationFactory()
 
-        serializer = OrganizationSerializer(organization)
+        serializer = OrganizationSerializer(organization, context={'request': self.request})
 
         actual = serializer.data
 
@@ -20,18 +35,21 @@ class TestOrganizationSerializer(APITestCase):
 
         self.assertEqual(expected, actual)
 
-    def test_create_organization_success(self):
+    @patch('apps.organizations.signals.organization_created.send')
+    def test_create_organization_success(self, mock_organization_created_send):
 
         data = {
             'name': fake.user_name()
         }
 
-        serializer = OrganizationSerializer(data=data)
+        serializer = OrganizationSerializer(data=data, context={'request': self.request})
         is_valid = serializer.is_valid()
         organization = serializer.save()
 
         self.assertTrue(is_valid)
         self.assertEqual(data['name'], organization.name)
+
+        mock_organization_created_send.assert_called_once_with(sender=organization.__class__, organization=organization, user=self.request.user)
 
     def test_create_organization_name_invalid_fail(self):
 
@@ -39,9 +57,11 @@ class TestOrganizationSerializer(APITestCase):
             'name': 'not a valid name',
         }
 
-        serializer = OrganizationSerializer(data=data)
+        serializer = OrganizationSerializer(data=data, context={'request': self.request})
         is_valid = serializer.is_valid()
         errors = serializer.errors
+
+        # self.assertS
 
         self.assertFalse(is_valid)
         self.assertEqual(['name'], [*errors])
@@ -56,7 +76,7 @@ class TestOrganizationSerializer(APITestCase):
             'name': name
         }
 
-        serializer = OrganizationSerializer(data=data)
+        serializer = OrganizationSerializer(data=data, context={'request': self.request})
         is_valid = serializer.is_valid()
         errors = serializer.errors
 
@@ -73,7 +93,7 @@ class TestOrganizationSerializer(APITestCase):
             'name': 'quikwise'
         }
 
-        serializer = OrganizationSerializer(organization, data=data)
+        serializer = OrganizationSerializer(organization, data=data, context={'request': self.request})
         serializer.is_valid()
         serializer.save()
 
@@ -88,7 +108,7 @@ class TestOrganizationSerializer(APITestCase):
             'name': name
         }
 
-        serializer = OrganizationSerializer(organization, data=data)
+        serializer = OrganizationSerializer(organization, data=data, context={'request': self.request})
         serializer.is_valid()
         serializer.save()
 
@@ -105,7 +125,7 @@ class TestOrganizationSerializer(APITestCase):
             'name': other_name
         }
 
-        serializer = OrganizationSerializer(organization, data=data)
+        serializer = OrganizationSerializer(organization, data=data, context={'request': self.request})
         is_valid = serializer.is_valid()
         errors = serializer.errors
 

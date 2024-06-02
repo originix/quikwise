@@ -1,3 +1,4 @@
+from apps.memberships.admin import MembershipInline
 from apps.organizations.models import Organization
 from apps.organizations.forms import OrganizationAdminForm
 from django.utils.translation import gettext_lazy as _
@@ -25,5 +26,9 @@ class OrganizationAdmin(VersionAdmin):
     readonly_fields = [
         'created_at',
         'updated_at',
+    ]
+
+    inlines = [
+        MembershipInline
     ]
 

@@ -1,4 +1,5 @@
-from .models import User
+from apps.memberships.admin import MembershipInline
+from apps.users.models import User
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
@@ -27,6 +28,10 @@ class UserAdmin(UserAdmin):
         'updated_at',
         'last_login',
         'date_joined'
+    ]
+
+    inlines = [
+        MembershipInline
     ]
 
     def has_delete_permission(self, request, obj=None):

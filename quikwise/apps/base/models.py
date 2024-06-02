@@ -49,6 +49,7 @@ class SoftControlModel(TimestampModel, SoftDeletionModel):
 
 
 class ControlModel(TimestampModel):
+    objects = models.Manager()
 
     class Meta:
         abstract = True

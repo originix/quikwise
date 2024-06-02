@@ -1,7 +1,10 @@
+from apps.memberships.abstracts import MembershipStatus
+from apps.memberships.abstracts import MembershipRole
 from apps.organizations.factories import OrganizationFactory
+from apps.organizations.models import Organization
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase, APIClient
+from rest_framework.test import APITestCase
 from faker import Faker
 
 from apps.users.factories import UserFactory
@@ -12,9 +15,8 @@ class TestOrganizationViewSet(APITestCase):
 
     def setUp(self):
         OrganizationFactory.create_batch(4)
-        user = UserFactory.create()
-
-        self.client.force_login(user)
+        self.user = UserFactory.create()
+        self.client.force_login(self.user)
 
     def test_list_organization(self):
         url = reverse('api:organization-list')
@@ -35,8 +37,15 @@ class TestOrganizationViewSet(APITestCase):
         response = self.client.post(url, data=data, format='json')
         response_json = response.json()
 
+        organization = Organization.objects.get(name=data['name'])
+
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(data['name'], response_json['data']['name'])
+
+        self.assertEqual(1, organization.members.count())
+        self.assertEqual(MembershipRole.OWNER, organization.membership_set.first().role)
+        self.assertEqual(MembershipStatus.JOINED, organization.membership_set.first().status)
+        self.assertEqual(self.user, organization.membership_set.first().user)
 
     def test_get_organization(self):
         organization = OrganizationFactory.create(name='quikwise-organization')
