@@ -93,3 +93,35 @@ class TestOrganizationViewSet(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertIsNotNone(organization.deleted_at)
+
+    def test_check_organization_name_not_existing(self):
+        url = reverse('api:organization-check-name')
+
+        data = {
+            'name': fake.user_name(),
+        }
+
+        response = self.client.post(url, data=data, format='json')
+        response_json = response.json()
+
+        expected =  {'available': True}
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(expected, response_json['data'])
+
+    def test_check_organization_name_existing(self):
+        url = reverse('api:organization-check-name')
+
+        OrganizationFactory.create(name='quikwise-organization')
+
+        data = {
+            'name': 'quikwise-organization'
+        }
+
+        response = self.client.post(url, data=data, format='json')
+        response_json = response.json()
+
+        expected =  {'available': False}
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(expected, response_json['data'])

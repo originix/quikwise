@@ -1,4 +1,5 @@
 from apps.organizations.serializers import OrganizationSerializer
+from apps.organizations.serializers import OrganizationCheckNameSerializer
 from apps.organizations.factories import OrganizationFactory
 from apps.users.factories import UserFactory
 from rest_framework.test import APITestCase
@@ -126,3 +127,35 @@ class TestOrganizationSerializer(APITestCase):
         self.assertFalse(is_valid)
         self.assertEqual(['name'], [*errors])
         self.assertIn('organization with this name already exists.', str(errors))
+
+
+class TestOrganizationCheckNameSerializer(APITestCase):
+
+    def test_check_name_available_not_existing(self):
+
+        data = {
+            'name': fake.user_name()
+        }
+
+        serializer = OrganizationCheckNameSerializer(data=data)
+        is_valid = serializer.is_valid()
+        data = serializer.validated_data
+
+        self.assertTrue(is_valid)
+        self.assertEqual(True, data['available'])
+
+    def test_check_name_available_existing_data(self):
+        name = fake.user_name()
+
+        OrganizationFactory.create(name=name)
+
+        data = {
+            'name': name
+        }
+
+        serializer = OrganizationCheckNameSerializer(data=data)
+        is_valid = serializer.is_valid()
+        data = serializer.validated_data
+
+        self.assertTrue(is_valid)
+        self.assertEqual(False, data['available'])
