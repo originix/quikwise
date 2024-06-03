@@ -1,9 +1,21 @@
 from apps.base.response import Response
+from rest_framework.mixins import ListModelMixin as BaseListModelMixin
 from rest_framework.mixins import CreateModelMixin as BaseCreateModelMixin
 from rest_framework.mixins import RetrieveModelMixin as BaseRetrieveModelMixin
 from rest_framework.mixins import UpdateModelMixin as BaseUpdateModelMixin
 from rest_framework.mixins import DestroyModelMixin as BaseDestroyModelMixin
 from rest_framework import status
+
+
+class ListModelMixin(BaseListModelMixin):
+
+    def list(self, request, *args, **kwargs):
+        response = super(ListModelMixin, self).list(request, *args, **kwargs)
+
+        if self.pagination_class is not None:
+            return response
+
+        return Response(data=response.data, status=status.HTTP_200_OK)
 
 
 class CreateModelMixin(BaseCreateModelMixin):

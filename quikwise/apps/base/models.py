@@ -11,7 +11,7 @@ options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('exclude_field_changes',)
 
 
 class SoftDeletionModel(models.Model):
-    deleted_at = models.DateTimeField(blank=True, null=True, verbose_name=_('Deleted at'))
+    deleted_at = models.DateTimeField(blank=True, null=True, verbose_name=_('deleted at'))
 
     objects = SoftDeletionManager()
     all_objects = SoftDeletionManager(alive_only=False)
@@ -49,6 +49,7 @@ class SoftControlModel(TimestampModel, SoftDeletionModel):
 
 
 class ControlModel(TimestampModel):
+    objects = models.Manager()
 
     class Meta:
         abstract = True

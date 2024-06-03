@@ -60,6 +60,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'apps.database_utilities',
+    'apps.memberships',
+    'apps.organizations',
     'apps.users'
 ]
 

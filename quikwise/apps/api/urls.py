@@ -2,6 +2,7 @@ from apps.auth.views import AuthLoginView
 from apps.auth.views import TokenRefreshView
 from apps.auth.views import TokenVerifyView
 from apps.auth.viewsets import RegisterViewSet
+from apps.organizations.viewsets import OrganizationViewSet
 from apps.users.viewsets import UserViewSet
 from django.urls import path
 from rest_framework.routers import DefaultRouter
@@ -16,6 +17,8 @@ urlpatterns = [
 router = DefaultRouter()
 
 router.register(r'auth/register', RegisterViewSet, basename='register')
+
+router.register(r'organizations', OrganizationViewSet, basename='organization')
 
 # user module
 router.register(r'users', UserViewSet, basename="accounts")

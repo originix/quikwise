@@ -18,8 +18,8 @@ $ docker-compose exec quikwise python manage.py migrate
 $ docker-compose exec quikwise python manage.py fix_utf8
 
 # Run test
-
 $ docker-compose exec quikwise coverage run manage.py test
+$ docker-compose exec quikwise coverage report
 
 # Bring system down without destroy any data
 $ docker-compose down
