@@ -1,0 +1,40 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "components.d.ts",
+    "auto-imports.d.ts",
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "target": "esnext",
+    "strict": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "noImplicitAny": false,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": [
+      "node",
+      "vite/client",
+      "@types/axios"
+    ],
+    "typeRoots": [
+      "../node_modules/@types",
+      "../@types"
+    ]
+  }
+}

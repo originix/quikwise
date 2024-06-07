@@ -111,6 +111,7 @@ DATABASES = {
         'NAME': os.environ.get('MYSQL_DATABASE'),
         'USER': os.environ.get('MYSQL_USER'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
+        'PORT': os.environ.get('MYSQL_PORT'),
         'OPTIONS': {
             'sql_mode': 'TRADITIONAL',
             'charset': 'utf8mb4',

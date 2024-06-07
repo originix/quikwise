@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap');
+
+body {
+  font-family: 'Noto Sans Thai', sans-serif;
+  @apply m-0;
+}
+
+.ant-tooltip-inner {
+  @apply flex items-center gap-2;
+
+  svg {
+    @apply stroke-white;
+  }
+}
